@@ -1,49 +1,51 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import InputGroup from './components/InputGroup'
-import GithubBackground from './components/GithubBackground'
+import Main from './Main'
 import Footer from './components/Footer'
 import Header from './components/Header'
-import Error from './components/Error'
-import Repo from './components/Repo'
+import { requestRepo } from './service/clientApi'
+import delay from './utils/delay'
 
 const Layout = styled.div`
   max-width: 630px;
   margin: 0 auto;
 `
 
-const Main = styled.div`
-  position: relative;
-  height: 380px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
 class App extends Component {
-
   state = {
-    fetching: true,
+    fetching: false,
     success: false,
     error: false
   }
 
-  submitHandler = () => {
+  setRepo = data => {
     this.setState({
-      fetching: true
-    }, () => {
-      setTimeout(() => {
-        this.setState({
-          fetching: false
-        }, () => {
-          setTimeout(() => {
-            this.setState({
-              success: true
-            })
-          }, 300);
-        })
-      }, 1000)
+      repo: data,
+      success: true
+    })
+  }
+
+  setError = error => {
+    this.setState({
+      hasError: true,
+      error: error
+    })
+  }
+
+  stopFetching = () => {
+    this.setState({
+      fetching: false
+    })
+  }
+
+  submitHandler = (org, repo) => {
+    this.setState({ fetching: true }, () => {
+      requestRepo(org, repo)
+        .then(this.stopFetching)
+        .then(delay(400))
+        .then(this.setRepo)
+        .catch(this.setError)
     })
   }
 
@@ -51,32 +53,11 @@ class App extends Component {
     return (
       <Layout>
         <Header />
-        <Main>
-          {
-            this.state.error &&
-              <Error>Repo doesn't exist</Error>
-          }
-          {
-            !this.state.success &&
-              <InputGroup onSubmit={this.submitHandler} />
-          }
-          {
-              this.state.success &&
-                <Repo
-                  name='react'
-                  orga='facebook'
-                  description='A declarative, efficient, and flexible JavaScript library for building user interfaces'
-                  link='https://facebook.github.io/react/'
-                  stars='45.093'
-                  language='JavaScript'
-                  tags={['view', 'declarative']}
-                  linesOfCode='2M'
-                  rockstarLevel='0.33'
-                  orgaLogo='https://avatars0.githubusercontent.com/u/69631?v=3&s=200'
-                />
-            }
-            <GithubBackground spinning={this.state.fetching} />
-        </Main>
+        <Main
+          {...this.state.data}
+          loading={this.state.fetching}
+          onSubmit={this.submitHandler}
+        />
         <Footer>
           by davesnx
         </Footer>

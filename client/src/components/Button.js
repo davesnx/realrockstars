@@ -25,11 +25,7 @@ const Button = styled.button`
 
 class Button extends Component {
   render () {
-    return (
-      <div>
-
-      </div>
-    )
+    return <div />
   }
 }
 

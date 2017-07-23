@@ -29,9 +29,24 @@ class Header extends Component {
         <H2>What's a real rockstar?</H2>
         <P>
           A developer who has a project with more stars than lines of code.
-          <br/>
+          <br />
           <a href='https://es.wikipedia.org/wiki/Linus_Torvalds'>
-          Linus Trovals </a> made <a href='https://github.com/torvalds/linux'>Linux's Kernel</a> and potentially is a rockstar, but not a real rockstar... the project has <Strong>24M lines of code</Strong> and only <Strong>46,253 Github stars</Strong>.
+            Linus Torvalds
+            {' '}
+          </a>
+          {' '}
+          made
+          {' '}
+          <a href='https://github.com/torvalds/linux'>Linux's Kernel</a>
+          {' '}
+          and potentially is a rockstar, but not a real rockstar... the project has
+          {' '}
+          <Strong>24M lines of code</Strong>
+          {' '}
+          and only
+          {' '}
+          <Strong>46,253 Github stars</Strong>
+          .
         </P>
         <P>That's a <Strong>0.08</Strong> of real rockstar level</P>
       </Root>

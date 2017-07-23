@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  client:
+    build: ./client
+    ports:
+      - "3000:80"
+    environment:
+        API_HOST: http://server
+
+  server:
+    build: ./server
+    ports:
+      - "8012:8012"
+
+  # db:
+  #   build: ./server/db
+  #   ports:
+  #     - "8012:8012"

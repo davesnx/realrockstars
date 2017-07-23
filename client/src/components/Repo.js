@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import approxNum from 'approximate-number'
 
 const Root = styled.div`
   max-width: 455px;
@@ -89,23 +90,25 @@ class Repo extends Component {
       <Root>
         <Left>
           <Header>
-            <Avatar
-              src={this.props.orgaLogo}
-              alt={this.props.orga}
-            />
-            <Title>{`${this.props.orga}/${this.props.name}`}</Title>
+            <Avatar src={this.props.avatarURL} alt={this.props.org} />
+            <Title>{`${this.props.org}/${this.props.name}`}</Title>
           </Header>
           <Content>
             <Desc>{this.props.description}</Desc>
             <Tags>
-              <Label>Lines of Code: {this.props.linesOfCode}</Label>
-              <Label>Stars: {this.props.stars}</Label>
+              <Label>Lines of Code: {approxNum(this.props.linesOfCode)}</Label>
+              <Label>Stars: {approxNum(this.props.stars)}</Label>
             </Tags>
           </Content>
         </Left>
         <Right>
           <RockstarLabel>
-            <Level>{this.props.rockstarLevel}</Level>
+            <Level>
+              {approxNum(this.props.rockstarLevel, {
+                decimal: '.',
+                round: true
+              })}
+            </Level>
             Rockstar Level
           </RockstarLabel>
         </Right>
@@ -116,14 +119,13 @@ class Repo extends Component {
 
 Repo.propTypes = {
   name: PropTypes.string,
-  orga: PropTypes.string,
+  org: PropTypes.string,
   description: PropTypes.string,
-  orgaLogo: PropTypes.string,
-  stars: PropTypes.string,
+  avatarURL: PropTypes.string,
+  stars: PropTypes.number,
   language: PropTypes.string,
-  tags: PropTypes.array,
-  linesOfCode: PropTypes.string,
-  rockstarLevel: PropTypes.string,
+  linesOfCode: PropTypes.number,
+  rockstarLevel: PropTypes.number
 }
 
 export default Repo

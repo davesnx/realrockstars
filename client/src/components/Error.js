@@ -28,11 +28,10 @@ class Error extends Component {
     return (
       <Root>
         <DeleteIcon width='1.5em' height='1.5em' />
-        { this.props.children }
+        {this.props.children}
       </Root>
     )
   }
 }
-
 
 export default Error

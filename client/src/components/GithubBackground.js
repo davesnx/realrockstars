@@ -23,7 +23,6 @@ const Panel = styled.div`
 `
 
 class GithubBackground extends Component {
-
   state = {
     contributions: generateRandomColorMap()
   }
@@ -41,13 +40,9 @@ class GithubBackground extends Component {
   render () {
     return (
       <Panel>
-        {
-          this.state.contributions.map((colorIndex, index) => {
-            return (
-              <Contribution key={index} color={colorMap[colorIndex]} />
-            )
-          })
-        }
+        {this.state.contributions.map((colorIndex, index) => {
+          return <Contribution key={index} color={colorMap[colorIndex]} />
+        })}
       </Panel>
     )
   }

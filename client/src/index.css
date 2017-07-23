@@ -4,14 +4,12 @@
 }
 
 #root {
-  background: linear-gradient(
-    40deg,
-    #ececec,
-    #ececec
-  );
+  min-height: 100vh;
+  background: linear-gradient(40deg, #ececec, #ececec);
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -27,9 +25,11 @@ html {
   /* 2 */
 }
 
+
 /**
  * Add the correct display in IE 9-.
  */
+
 article,
 aside,
 footer,
@@ -39,21 +39,27 @@ section {
   display: block;
 }
 
+
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
+
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
+
 /* Grouping content
    ========================================================================== */
+
+
 /**
  * Add the correct display in IE 9-.
  * 1. Add the correct display in IE.
  */
+
 figcaption,
 figure,
 main {
@@ -61,17 +67,21 @@ main {
   display: block;
 }
 
+
 /**
  * Add the correct margin in IE 8.
  */
+
 figure {
   margin: 1em 40px;
 }
+
 
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
+
 hr {
   box-sizing: content-box;
   /* 1 */
@@ -81,10 +91,12 @@ hr {
   /* 2 */
 }
 
+
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
+
 pre {
   font-family: monospace, monospace;
   /* 1 */
@@ -93,12 +105,16 @@ pre {
   /* 2 */
 }
 
+
 /* Text-level semantics
    ========================================================================== */
+
+
 /**
  * 1. Remove the gray background on active links in IE 10.
  * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
  */
+
 a {
   background-color: transparent;
   /* 1 */
@@ -106,10 +122,12 @@ a {
   /* 2 */
 }
 
+
 /**
  * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
+
 abbr[title] {
   border-bottom: none;
   /* 1 */
@@ -119,26 +137,32 @@ abbr[title] {
   /* 2 */
 }
 
+
 /**
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
+
 b,
 strong {
   font-weight: inherit;
 }
 
+
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
+
 b,
 strong {
   font-weight: bolder;
 }
 
+
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
+
 code,
 kbd,
 samp {
@@ -149,32 +173,40 @@ samp {
   /* 2 */
 }
 
+
 /**
  * Add the correct font style in Android 4.3-.
  */
+
 dfn {
   font-style: italic;
 }
 
+
 /**
  * Add the correct background and color in IE 9-.
  */
+
 mark {
   background-color: #ff0;
   color: #000;
 }
 
+
 /**
  * Add the correct font size in all browsers.
  */
+
 small {
   font-size: 80%;
 }
+
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
  */
+
 sub,
 sup {
   font-size: 75%;
@@ -182,51 +214,67 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
+
 sub {
   bottom: -0.25em;
 }
+
 sup {
   top: -0.5em;
 }
 
+
 /* Embedded content
    ========================================================================== */
+
+
 /**
  * Add the correct display in IE 9-.
  */
+
 audio,
 video {
   display: inline-block;
 }
 
+
 /**
  * Add the correct display in iOS 4-7.
  */
+
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
+
 /**
  * Remove the border on images inside links in IE 10-.
  */
+
 img {
   border-style: none;
 }
 
+
 /**
  * Hide the overflow in IE.
  */
+
 svg:not(:root) {
   overflow: hidden;
 }
 
+
 /* Forms
    ========================================================================== */
+
+
 /**
  * 1. Change the font styles in all browsers (opinionated).
  * 2. Remove the margin in Firefox and Safari.
  */
+
 button,
 input,
 optgroup,
@@ -242,31 +290,37 @@ textarea {
   /* 2 */
 }
 
+
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
+
 button,
 input {
   /* 1 */
   overflow: visible;
 }
 
+
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
+
 button,
 select {
   /* 1 */
   text-transform: none;
 }
 
+
 /**
  * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
  *    controls in Android 4.
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
+
 button,
 html [type="button"],
 [type="reset"],
@@ -275,9 +329,11 @@ html [type="button"],
   /* 2 */
 }
 
+
 /**
  * Remove the inner border and padding in Firefox.
  */
+
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -286,9 +342,11 @@ button::-moz-focus-inner,
   padding: 0;
 }
 
+
 /**
  * Restore the focus styles unset by the previous rule.
  */
+
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
@@ -296,12 +354,15 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText;
 }
 
+
 /**
  * Correct the padding in Firefox.
  */
+
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
+
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -309,6 +370,7 @@ fieldset {
  * 3. Remove the padding so developers are not caught out when they zero out
  *    `fieldset` elements in all browsers.
  */
+
 legend {
   box-sizing: border-box;
   /* 1 */
@@ -324,10 +386,12 @@ legend {
   /* 1 */
 }
 
+
 /**
  * 1. Add the correct display in IE 9-.
  * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
+
 progress {
   display: inline-block;
   /* 1 */
@@ -335,17 +399,21 @@ progress {
   /* 2 */
 }
 
+
 /**
  * Remove the default vertical scrollbar in IE.
  */
+
 textarea {
   overflow: auto;
 }
+
 
 /**
  * 1. Add the correct box sizing in IE 10-.
  * 2. Remove the padding in IE 10-.
  */
+
 [type="checkbox"],
 [type="radio"] {
   box-sizing: border-box;
@@ -354,18 +422,22 @@ textarea {
   /* 2 */
 }
 
+
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
+
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
+
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
+
 [type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -373,18 +445,22 @@ textarea {
   /* 2 */
 }
 
+
 /**
  * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
  */
+
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
+
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
+
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
   /* 1 */
@@ -392,66 +468,87 @@ textarea {
   /* 2 */
 }
 
+
 /* Interactive
    ========================================================================== */
+
+
 /*
  * Add the correct display in IE 9-.
  * 1. Add the correct display in Edge, IE, and Firefox.
  */
+
 details,
 menu {
   display: block;
 }
 
+
 /*
  * Add the correct display in all browsers.
  */
+
 summary {
   display: list-item;
 }
 
+
 /* Scripting
    ========================================================================== */
+
+
 /**
  * Add the correct display in IE 9-.
  */
+
 canvas {
   display: inline-block;
 }
 
+
 /**
  * Add the correct display in IE.
  */
+
 template {
   display: none;
 }
 
+
 /* Hidden
    ========================================================================== */
+
+
 /**
  * Add the correct display in IE 10-.
  */
+
 [hidden] {
   display: none;
 }
+
 @font-face {
   font-family: "Helvetica Neue For Number";
   src: local("Helvetica Neue");
   unicode-range: U+30-39;
 }
+
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
 *:before,
 *:after {
   box-sizing: border-box;
 }
+
 html,
 body {
   width: 100%;
   height: 100%;
 }
+
 body {
   font-family: "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 12px;
@@ -459,6 +556,7 @@ body {
   color: rgba(0, 0, 0, 0.65);
   background-color: #fff;
 }
+
 body,
 div,
 dl,
@@ -500,6 +598,7 @@ section {
   margin: 0;
   padding: 0;
 }
+
 button,
 input,
 select,
@@ -509,22 +608,27 @@ textarea {
   line-height: inherit;
   color: inherit;
 }
+
 ul,
 ol {
   list-style: none;
 }
+
 input::-ms-clear,
 input::-ms-reveal {
   display: none;
 }
+
 ::-moz-selection {
   background: #108ee9;
   color: #fff;
 }
+
 ::selection {
   background: #108ee9;
   color: #fff;
 }
+
 a {
   color: #108ee9;
   background: transparent;
@@ -534,27 +638,33 @@ a {
   -webkit-transition: color .3s ease;
   transition: color .3s ease;
 }
+
 a:focus {
   text-decoration: underline;
   -webkit-text-decoration-skip: ink;
-          text-decoration-skip: ink;
+  text-decoration-skip: ink;
 }
+
 a:hover {
   color: #49a9ee;
 }
+
 a:active {
   color: #0e77ca;
 }
+
 a:active,
 a:hover {
   outline: 0;
   text-decoration: none;
 }
+
 a[disabled] {
   color: rgba(0, 0, 0, 0.25);
   cursor: not-allowed;
   pointer-events: none;
 }
+
 .ant-divider {
   margin: 0 6px;
   display: inline-block;
@@ -573,11 +683,13 @@ samp {
 .clearfix {
   zoom: 1;
 }
+
 .clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
 }
+
 .clearfix:after {
   clear: both;
   visibility: hidden;
@@ -589,11 +701,10 @@ samp {
   font-family: 'icon';
   src: url('https://at.alicdn.com/t/font_zck90zmlh7hf47vi.eot');
   /* IE9*/
-  src:
-    url('https://at.alicdn.com/t/font_zck90zmlh7hf47vi.eot?#iefix') format('embedded-opentype'), /* chrome、firefox */
-    url('https://at.alicdn.com/t/font_zck90zmlh7hf47vi.woff') format('woff'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('https://at.alicdn.com/t/font_zck90zmlh7hf47vi.ttf') format('truetype'), /* iOS 4.1- */
-    url('https://at.alicdn.com/t/font_zck90zmlh7hf47vi.svg#iconfont') format('svg');
+  src: url('https://at.alicdn.com/t/font_zck90zmlh7hf47vi.eot?#iefix') format('embedded-opentype'), /* chrome、firefox */
+  url('https://at.alicdn.com/t/font_zck90zmlh7hf47vi.woff') format('woff'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('https://at.alicdn.com/t/font_zck90zmlh7hf47vi.ttf') format('truetype'), /* iOS 4.1- */
+  url('https://at.alicdn.com/t/font_zck90zmlh7hf47vi.svg#iconfont') format('svg');
 }
 
 .icon {
