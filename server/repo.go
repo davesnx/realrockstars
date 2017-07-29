@@ -7,13 +7,26 @@ import (
 	"net/http"
 )
 
+// Repo ...
+type Repo struct {
+	URL           string  `json:"url"`
+	Name          string  `json:"name"`
+	Description   string  `json:"desc"`
+	Org           string  `json:"org"`
+	OrgAvatar     string  `json:"org_avatar"`
+	Language      string  `json:"lang"`
+	Stars         int     `json:"stars"`
+	Lines         int     `json:"lines"`
+	RockstarLevel float64 `json:"rockstar_level"`
+}
+
 // RepoController ...
 func RepoController(w http.ResponseWriter, r *http.Request) {
 	ctx := context.Background()
-	values := r.URL.Query()
+	query := r.URL.Query()
 
-	organitzation := values["org"][0]
-	repositoryName := values["name"][0]
+	organitzation := query["org"][0]
+	repositoryName := query["name"][0]
 
 	repo, err := getRepoInfo(ctx, organitzation, repositoryName)
 	if err != nil {
@@ -21,9 +34,14 @@ func RepoController(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprint(w, err.Error())
 	}
 
+	payload, err := json.Marshal(repo)
+	if err != nil {
+		w.WriteHeader(http.StatusNotFound)
+		fmt.Fprint(w, err.Error())
+	}
+
 	w.Header().Set("content-type", "application/json")
 	w.Header().Set("Access-Control-Allow-Origin", "*")
-	payload, _ := json.Marshal(repo)
 	w.WriteHeader(http.StatusOK)
 	w.Write(payload)
 }
@@ -58,6 +76,8 @@ func getRepoInfo(ctx context.Context, org string, name string) (Repo, error) {
 		Language:    *remoteData.Language,
 		Stars:       remoteData.GetStargazersCount(),
 		Lines:       linesOfCode,
+		Name:        name,
+		Org:         org,
 	}
 
 	repo.RockstarLevel = calculateRockStarLevel(repo)

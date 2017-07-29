@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import styled from 'styled-components'
 import R from 'ramda'
 
@@ -48,7 +48,7 @@ const GithubLabel = Input.extend `
   background-color: #D9D9D9;
 `
 
-class InputGroup extends React.Component {
+class InputGroup extends Component {
   keyPressHandler = event => {
     const hasRepoInput = !!this.repo.value
     const hasOrgaInput = !!this.orga.value
@@ -62,34 +62,25 @@ class InputGroup extends React.Component {
     }
   }
 
-  render() {
-    return ( <
-      Root onKeyPress = {
-        this.keyPressHandler
-      } >
-      <
-      GithubLabel value = 'github.com'
-      disabled left / >
-      <
-      Input innerRef = {
-        node => {
-          this.orga = node
-        }
-      }
-      placeholder = 'organitzation'
-      center /
-      >
-      <
-      Input innerRef = {
-        node => {
-          this.repo = node
-        }
-      }
-      placeholder = 'repo'
-      right /
-      >
-      <
-      /Root>
+  render () {
+    return (
+      <Root onKeyPress={this.keyPressHandler}>
+      <GithubLabel
+        value='github.com'
+        disabled
+        left
+      />
+      <Input
+        innerRef={node => { this.orga = node }}
+        placeholder='organitzation'
+        center
+      />
+      <Input
+        innerRef={node => { this.repo = node }}
+        placeholder='repo'
+        right
+      />
+      </Root>
     )
   }
 }

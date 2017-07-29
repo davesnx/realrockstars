@@ -14,36 +14,39 @@ const Layout = styled.div`
 
 class App extends Component {
   state = {
-    fetching: false,
+    loading: false,
     success: false,
-    error: false
+    error: false,
+    repo: {}
   }
 
   setRepo = data => {
+    console.log(data)
     this.setState({
+      loading: false,
       repo: data,
       success: true
     })
   }
 
   setError = error => {
+    console.error(error)
     this.setState({
-      hasError: true,
       error: error
     })
   }
 
-  stopFetching = () => {
+  stopLoading = () => {
     this.setState({
-      fetching: false
+      loading: false
     })
   }
 
   submitHandler = (org, repo) => {
-    this.setState({ fetching: true }, () => {
+    this.setState({ loading: true }, () => {
       requestRepo(org, repo)
-        .then(this.stopFetching)
-        .then(delay(400))
+        // .then(this.stopLoading)
+        // .then(delay(400))
         .then(this.setRepo)
         .catch(this.setError)
     })
@@ -54,8 +57,8 @@ class App extends Component {
       <Layout>
         <Header />
         <Main
-          {...this.state.data}
-          loading={this.state.fetching}
+          {...this.state.repo}
+          loading={this.state.loading}
           onSubmit={this.submitHandler}
         />
         <Footer>

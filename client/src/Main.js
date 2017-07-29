@@ -16,22 +16,22 @@ const Root = styled.div`
 
 class Main extends Component {
   render () {
-    const { hasError, success, loading, error } = this.props
+    const { success, loading, error } = this.props
     return (
       <Root>
-        {hasError && <Error>{error.message}</Error>}
+        {!!error && <Error>{error.message}</Error>}
         {!success && <InputGroup onSubmit={this.props.onSubmit} />}
         {success &&
           <Repo
-            name={this.props.data.name}
-            org={this.props.data.org}
-            description={this.props.data.description}
-            link={this.props.data.url}
-            stars={this.props.data.stars}
-            language={this.props.data.language}
-            linesOfCode={this.props.data.lines}
-            rockstarLevel={this.props.data.rockstarLevel}
-            orgaLogo={this.props.data.avatarUrl}
+            name={this.props.repo.name}
+            org={this.props.repo.org}
+            description={this.props.repo.description}
+            link={this.props.repo.url}
+            stars={this.props.repo.stars}
+            language={this.props.repo.language}
+            linesOfCode={this.props.repo.lines}
+            rockstarLevel={this.props.repo.rockstarLevel}
+            orgaLogo={this.props.repo.avatarUrl}
           />}
         <GithubBackground spinning={loading} />
       </Root>
