@@ -6,12 +6,6 @@ function debugP (args) {
 }
 
 export function requestRepo (organizationName, repoName) {
-  const options = {
-    headers: {}
-  }
-
   const endpoint = `repo?org=${organizationName}&name=${repoName}`
-  return fetch(apiHost + endpoint, options)
-    .then(debugP)
-    .then(resp => resp.json())
+  return fetch(apiHost + endpoint).then(debugP).then(resp => resp.json())
 }
