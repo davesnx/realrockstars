@@ -6,17 +6,6 @@ function debugP (args) {
 }
 
 export function requestRepo (organizationName, repoName) {
-  const options = {
-    mode: 'no-cors',
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    }
-  }
-
   const endpoint = `repo?org=${organizationName}&name=${repoName}`
-  return fetch(apiHost + endpoint, options)
-    .then(debugP)
-    .then(resp => resp.json())
+  return fetch(apiHost + endpoint).then(debugP).then(resp => resp.json())
 }
