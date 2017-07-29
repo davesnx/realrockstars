@@ -7,12 +7,7 @@ function debugP (args) {
 
 export function requestRepo (organizationName, repoName) {
   const options = {
-    mode: 'no-cors',
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    }
+    headers: {}
   }
 
   const endpoint = `repo?org=${organizationName}&name=${repoName}`
