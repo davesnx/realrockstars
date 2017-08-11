@@ -27,7 +27,7 @@ class GithubBackground extends Component {
     contributions: generateRandomColorMap()
   }
 
-  componentWillUpdate () {
+  componentWillUpdate() {
     if (this.props.spinning) {
       setTimeout(() => {
         this.setState({
@@ -37,7 +37,7 @@ class GithubBackground extends Component {
     }
   }
 
-  render () {
+  render() {
     return (
       <Panel>
         {this.state.contributions.map((colorIndex, index) => {

@@ -24,9 +24,7 @@ const Root = styled.div`
   z-index: 1;
 `
 
-const Left = styled.div`
-  max-width: 280px;
-`
+const Left = styled.div`max-width: 280px;`
 const Right = styled.div``
 
 const Header = styled.div`
@@ -36,18 +34,14 @@ const Header = styled.div`
   margin-bottom: 10px;
 `
 
-const Content = styled.div`
-
-`
+const Content = styled.div``
 
 const Title = styled.p`
   color: #108ee9;
   margin-left: 6px;
 `
 
-const Desc = styled.p`
-
-`
+const Desc = styled.p``
 
 const Avatar = styled.img`
   width: 20px;
@@ -71,7 +65,7 @@ const Label = styled.p`
 
 const Level = styled.div`
   font-size: 45px;
-  color: #FFDA24;
+  color: #ffda24;
   letter-spacing: -2px;
   text-align: center;
 `
@@ -79,13 +73,13 @@ const Level = styled.div`
 const RockstarLabel = styled.div`
   padding: 15px 10px;
   color: black;
-  border: 5px solid #FFDA24;
+  border: 5px solid #ffda24;
   background-color: rgba(255, 218, 36, 0.2);
   border-radius: 5px;
 `
 
 class Repo extends Component {
-  render () {
+  render() {
     return (
       <Root>
         <Left>
@@ -94,10 +88,16 @@ class Repo extends Component {
             <Title>{`${this.props.org}/${this.props.name}`}</Title>
           </Header>
           <Content>
-            <Desc>{this.props.description}</Desc>
+            <Desc>
+              {this.props.description}
+            </Desc>
             <Tags>
-              <Label>Lines of Code: {approxNum(this.props.linesOfCode)}</Label>
-              <Label>Stars: {approxNum(this.props.stars)}</Label>
+              <Label>
+                Lines of Code: {approxNum(this.props.linesOfCode)}
+              </Label>
+              <Label>
+                Stars: {approxNum(this.props.stars)}
+              </Label>
             </Tags>
           </Content>
         </Left>

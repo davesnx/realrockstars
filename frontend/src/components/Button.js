@@ -23,10 +23,4 @@ const Button = styled.button`
   transition: all .3s cubic-bezier(.645, .045, .355, 1);
 `
 
-class Button extends Component {
-  render () {
-    return <div />
-  }
-}
-
 export default Button

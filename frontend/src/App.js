@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-import Footer from './components/Footer'
-import Header from './components/Header'
-import InputGroup from './components/InputGroup'
-import GithubBackground from './components/GithubBackground'
-import Error from './components/Error'
-import Repo from './components/Repo'
+import Footer from './components/footer/footer'
+import Header from './components/header/header'
+import InputGroup from './components/search/input-group'
+import GithubGrid from './components/github-grid/github-grid'
+import Error from './components/error/error'
+import Repo from './components/repository/item'
 import { requestRepo } from './service/clientApi'
 import delay from './utils/delay'
 
@@ -40,14 +40,16 @@ class App extends Component {
 
   setError = error => {
     this.setState({
-      error: error
+      error: error,
+      loading: false
     })
   }
 
-  stopLoading = () => {
+  stopLoading = cosis => {
     this.setState({
       loading: false
     })
+    return cosis
   }
 
   submitHandler = (org, repo) => {
@@ -61,29 +63,29 @@ class App extends Component {
   }
 
   render() {
-    const { error, success } = this.props
+    const { error, success } = this.state
     return (
       <Layout>
-        <Header />
         <Main>
-          {!!error &&
+          {error &&
             <Error>
               {error.message}
             </Error>}
           {!success && <InputGroup onSubmit={this.submitHandler} />}
           {success &&
+            this.state.repo &&
             <Repo
-              name={this.props.repo.name}
-              org={this.props.repo.org}
-              description={this.props.repo.description}
-              link={this.props.repo.url}
-              stars={this.props.repo.stars}
-              language={this.props.repo.language}
-              linesOfCode={this.props.repo.lines}
-              rockstarLevel={this.props.repo.rockstarLevel}
-              orgaLogo={this.props.repo.avatarUrl}
+              name={this.state.repo.name}
+              org={this.state.repo.org}
+              description={this.state.repo.description}
+              link={this.state.repo.url}
+              stars={this.state.repo.stars}
+              language={this.state.repo.language}
+              linesOfCode={this.state.repo.lines}
+              rockstarLevel={this.state.repo.rockstarLevel}
+              orgaLogo={this.state.repo.avatarUrl}
             />}
-          <GithubBackground spinning={this.state.loading} />
+          <GithubGrid spinning={this.state.loading} />
         </Main>
         <Footer>by davesnx</Footer>
       </Layout>

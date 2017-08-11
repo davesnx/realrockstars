@@ -1,21 +1,17 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import Repo from './Repo'
+import Repo from './item'
 
-const List = styled.div`
-
-`
+const List = styled.div``
 
 class RepoList extends Component {
-  render () {
+  render() {
     const { data } = this.props
     return (
       <div>
-        {
-          data.map((repo, i) => {
-            return <Repo { ...repo } key={i} />
-          })
-        }
+        {data.map((repo, i) => {
+          return <Repo {...repo} key={i} />
+        })}
       </div>
     )
   }

@@ -8,12 +8,8 @@ const Root = styled.div`
 `
 
 class Footer extends Component {
-  render () {
-    return (
-      <Root>
-        by davesnx
-      </Root>
-    )
+  render() {
+    return <Root>by davesnx</Root>
   }
 }
 
