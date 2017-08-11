@@ -12,7 +12,13 @@ import (
 var port = ":9090"
 var githubClient = github.NewClient(nil)
 
+func okController(w http.ResponseWriter, _ *http.Request) {
+	w.WriteHeader(http.StatusOK)
+	return
+}
+
 func main() {
+	http.HandleFunc("/", okController)
 	http.HandleFunc("/top", TopController)
 	http.HandleFunc("/repo", RepoController)
 
