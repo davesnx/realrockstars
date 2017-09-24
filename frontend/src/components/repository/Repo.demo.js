@@ -3,11 +3,11 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
 
-import Repo from './item'
+import Repo from './Repo'
 
 const stories = storiesOf('Repo', module)
 
-stories.add('default', () =>
+stories.add('default', () => (
   <div>
     <Repo
       name={'node-jq'}
@@ -20,4 +20,4 @@ stories.add('default', () =>
       rockstarLevel={0.88}
     />
   </div>
-)
+))

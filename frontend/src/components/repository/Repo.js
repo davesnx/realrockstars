@@ -8,7 +8,7 @@ const Root = styled.div`
   margin: 0 auto;
   width: 100%;
 
-  border: 1px solid #bebaba;
+
   background: #fff;
   border-radius: 4px;
   font-size: 12px;
@@ -22,6 +22,13 @@ const Root = styled.div`
   justify-content: space-between;
 
   z-index: 1;
+
+  box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.15);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.15);
+  }
 `
 
 const Left = styled.div`max-width: 280px;`
@@ -48,6 +55,10 @@ const Avatar = styled.img`
   height: 20px;
   display: inline-block;
   border-radius: 2px;
+
+  word-wrap: break-word;
+  overflow: hidden;
+}
 `
 
 const Tags = styled.div`
@@ -79,24 +90,34 @@ const RockstarLabel = styled.div`
 `
 
 class Repo extends Component {
-  render() {
+  render () {
+    const {
+      avatarURL,
+      org,
+      name,
+      description,
+      linesOfCode,
+      stars,
+      rockstarLevel
+    } = this.props
     return (
       <Root>
         <Left>
           <Header>
-            <Avatar src={this.props.avatarURL} alt={this.props.org} />
-            <Title>{`${this.props.org}/${this.props.name}`}</Title>
+            {this.props.avatarURL &&
+              <Avatar src={this.props.avatarURL} alt={org} />}
+            <Title>{`${org}/${name}`}</Title>
           </Header>
           <Content>
             <Desc>
-              {this.props.description}
+              {description}
             </Desc>
             <Tags>
               <Label>
-                Lines of Code: {approxNum(this.props.linesOfCode)}
+                Lines of Code: {approxNum(linesOfCode)}
               </Label>
               <Label>
-                Stars: {approxNum(this.props.stars)}
+                Stars: {approxNum(stars)}
               </Label>
             </Tags>
           </Content>
@@ -104,7 +125,7 @@ class Repo extends Component {
         <Right>
           <RockstarLabel>
             <Level>
-              {approxNum(this.props.rockstarLevel, {
+              {approxNum(rockstarLevel, {
                 decimal: '.',
                 round: true
               })}
