@@ -7,8 +7,8 @@ import Logo from './logo'
 
 const stories = storiesOf('Logo', module)
 
-stories.add('only text', () =>
+stories.add('text', () => (
   <div>
     <Logo />
   </div>
-)
+))

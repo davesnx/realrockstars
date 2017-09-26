@@ -5,7 +5,7 @@
 
 #root {
   min-height: 100vh;
-  background: linear-gradient(40deg, #ececec, #ececec);
+  background: rgba(246, 245, 245, 0.3);
 }
 
 html,

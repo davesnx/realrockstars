@@ -114,7 +114,7 @@ class Repo extends Component {
             </Desc>
             <Tags>
               <Label>
-                Lines of Code: {approxNum(linesOfCode)}
+                Lines: {approxNum(linesOfCode)}
               </Label>
               <Label>
                 Stars: {approxNum(stars)}

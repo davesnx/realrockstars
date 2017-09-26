@@ -1,17 +1,22 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-const Root = styled.div``
+const black = 'rgb(50, 50, 50)'
 
 const H1 = styled.h1`
+  max-width: 350px;
+  padding: 10px;
   margin: 0;
+  line-height: 0.8;
   text-align: center;
-  line-height: 3em;
+  text-transform: uppercase;
+  border: 4px solid ${black};
+  color: ${black};
 `
 
 class Logo extends Component {
-  render() {
-    return <H1>realrockstar.io</H1>
+  render () {
+    return <H1>realrockstars.io</H1>
   }
 }
 
