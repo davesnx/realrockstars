@@ -16,11 +16,11 @@ const Button = styled.button`
   font-size: 12px;
   font-weight: 500;
   border-radius: 4px;
-  color: rgba(0, 0, 0, .65);
+  color: rgba(0, 0, 0, 0.65);
   background-color: #fff;
   border-color: #d9d9d9;
   border: 1px solid transparent;
-  transition: all .3s cubic-bezier(.645, .045, .355, 1);
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 `
 
 export default Button

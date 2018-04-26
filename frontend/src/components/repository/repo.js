@@ -2,53 +2,49 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import approxNum from 'approximate-number'
+import StarIcon from 'react-feather/dist/icons/star'
+import ListIcon from 'react-feather/dist/icons/list'
+import Spacer from './../spacer'
+import Text from './../text'
+
+import constants from './../constants'
 
 const Root = styled.div`
-  max-width: 455px;
   margin: 0 auto;
-  width: 100%;
-
 
   background: #fff;
-  border-radius: 4px;
-  font-size: 12px;
   position: relative;
   overflow: hidden;
-  transition: all .3s;
-
-  padding: 11px;
+  transition: all 0.3s;
 
   display: flex;
-  justify-content: space-between;
 
   z-index: 1;
-
-  box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.15);
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.15);
-  }
 `
 
-const Left = styled.div`max-width: 280px;`
+const Left = styled.div`
+  width: 124px;
+  height: 124px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+`
+
 const Right = styled.div``
 
 const Header = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 10px;
 `
 
 const Content = styled.div``
 
-const Title = styled.p`
-  color: #108ee9;
-  margin-left: 6px;
+const Title = styled.h2`
+  color: ${constants.colors.blue};
+  margin: 0;
+  font-weight: normal;
 `
-
-const Desc = styled.p``
 
 const Avatar = styled.img`
   width: 20px;
@@ -63,34 +59,29 @@ const Avatar = styled.img`
 
 const Tags = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: left;
 `
 
-const Label = styled.p`
-  background-color: #d9d9d9;
-  border-radius: 3px;
-  padding: 4px 7px;
-  margin: 6px 0px;
-  color: black;
-`
+const Label = styled.div`
+  color: ${constants.colors.black};
 
-const Level = styled.div`
-  font-size: 45px;
-  color: #ffda24;
-  letter-spacing: -2px;
-  text-align: center;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 const RockstarLabel = styled.div`
-  padding: 15px 10px;
-  color: black;
-  border: 5px solid #ffda24;
-  background-color: rgba(255, 218, 36, 0.2);
-  border-radius: 5px;
+  color: ${constants.colors.brand};
+`
+
+const Strong = styled.span`
+  font-weight: 600;
 `
 
 class Repo extends Component {
-  render () {
+  render() {
     const {
       avatarURL,
       org,
@@ -103,35 +94,43 @@ class Repo extends Component {
     return (
       <Root>
         <Left>
-          <Header>
-            {this.props.avatarURL &&
-              <Avatar src={this.props.avatarURL} alt={org} />}
-            <Title>{`${org}/${name}`}</Title>
-          </Header>
-          <Content>
-            <Desc>
-              {description}
-            </Desc>
-            <Tags>
-              <Label>
-                Lines: {approxNum(linesOfCode)}
-              </Label>
-              <Label>
-                Stars: {approxNum(stars)}
-              </Label>
-            </Tags>
-          </Content>
+          <RockstarLabel>
+            {approxNum(rockstarLevel, {
+              decimal: '.',
+              round: true
+            })}
+          </RockstarLabel>
         </Left>
         <Right>
-          <RockstarLabel>
-            <Level>
-              {approxNum(rockstarLevel, {
-                decimal: '.',
-                round: true
-              })}
-            </Level>
-            Rockstar Level
-          </RockstarLabel>
+          <Header>
+            {this.props.avatarURL && (
+              <Avatar src={this.props.avatarURL} alt={org} />
+            )}
+            <Spacer left={1}>
+              <Title>{`${org}/${name}`}</Title>
+            </Spacer>
+          </Header>
+          <Content>
+            <Spacer top={2} bottom={3}>
+              <Text>{description}</Text>
+            </Spacer>
+            <Tags>
+              <Label>
+                <ListIcon />
+                <Spacer left={1}>
+                  <Strong>{approxNum(linesOfCode)}</Strong> Lines
+                </Spacer>
+              </Label>
+              <Spacer left={3}>
+                <Label>
+                  <StarIcon />
+                  <Spacer left={1}>
+                    <Strong>{approxNum(stars)}</Strong> Stars
+                  </Spacer>
+                </Label>
+              </Spacer>
+            </Tags>
+          </Content>
         </Right>
       </Root>
     )
