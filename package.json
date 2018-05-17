@@ -3,7 +3,6 @@
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "start": "nodemon --watch src --exec \"NODE_ENV=dev node build/server.js\"",
-    "build": "concurrently --kill-others 'npm run build:client' 'npm run build:server'",
     "build:prod": "webpack --config webpack.client.js && webpack --config webpack.server.js",
     "build:client": "NODE_ENV=dev webpack --config webpack.client.js --watch",
     "build:server": "NODE_ENV=dev webpack --config webpack.server.js --watch"
