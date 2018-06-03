@@ -7,7 +7,7 @@ import { ServerStyleSheet } from 'styled-components'
 import path from 'path'
 import URL from 'url'
 import octonode from 'octonode'
-import { port } from './../../config'
+import { port, address } from './../../config'
 
 import __document from './document'
 import App from './../client'
@@ -21,15 +21,40 @@ const github = octonode.client() // https://github.com/pksunkara/octonode
 //   console.log(reset);  // 1372700873 (UTC epoch seconds)
 // })
 
+const IS_DEV = process.env.NODE_ENV === 'development'
+
 const fetchRepositoryMiddleware = (req, res) => {
   const { org, name } = req.body
   const repo = github.repo(`${org}/${name}`)
-  repo.info((error, data) => {
+
+  if (IS_DEV) {
     res.send({
-      data: data,
-      OK: true
+      OK: true,
+      data: {
+        name: 'facebook/react',
+        description: 'A declarative, efficient, and flexible JavaScript library for building user interfaces.',
+        avatarURL: 'http://cdn1.sciencefiction.com/wp-content/uploads/2013/03/url-491.jpeg',
+        stars: 97365,
+        linesOfCode: 136392,
+        rockstarLevel: 97365 / 136392
+      }
     })
-  })
+  }
+
+  // repo.info((error, data) => {
+  //   res.send({
+  //     data: {
+  //       name: data.full_name,
+  //       description: data.description,
+  //       avatarURL: data.owner.avatar_url,
+  //       stars: data.stargazers_count,
+  //       linesOfCode: data.size,
+  //       rockstarLevel: data.stargazers_count / data.size
+  //     },
+  //     OK: !error,
+  //     error: error && error.message
+  //   })
+  // })
 }
 
 const renderFrontendMiddleware = (_, res) => {
@@ -46,5 +71,5 @@ server.get('/', renderFrontendMiddleware)
 server.post('/repo', fetchRepositoryMiddleware)
 
 server.listen(port, () => {
-  console.log(`> Ready on http://localhost:${port}`)
+  console.log(`> Ready on ${address}:${port}`)
 })

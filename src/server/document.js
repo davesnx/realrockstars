@@ -1,6 +1,7 @@
-import { Helmet } from "react-helmet"
+import { Helmet } from 'react-helmet'
 
-const __Document = ({ head, body, styles }) => `
+const __Document = ({ head, body, styles }) =>
+  `
 <!doctype html>
   <html lang="en">
     <head>

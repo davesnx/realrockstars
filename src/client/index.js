@@ -2,8 +2,8 @@ import ReactDOM from 'react-dom'
 import React, { Fragment, Component } from 'react'
 import styled, { injectGlobal } from 'styled-components'
 import Parser from 'html-react-parser'
-
 import styledNormalize from 'styled-normalize'
+// import { Transition, animated } from 'react-spring'
 
 import Logo from './components/logo/logo'
 import Repository from './components/repository/repo'
@@ -37,7 +37,7 @@ injectGlobal`
   }
 `
 
-const IS_RUNNING_ON_BROWSER = typeof document === "object"
+const IS_RUNNING_ON_BROWSER = typeof document === 'object'
 
 class Home extends Component {
   constructor (props) {
@@ -54,12 +54,9 @@ class Home extends Component {
   submitHandler (org, name) {
     httpPost('/repo', { org, name })
       .then(response => {
-        console.log(response)
         this.setState({
-          data: {
-            hasResult: true,
-            data: response
-          }
+          hasResult: true,
+          data: response.data
         })
       })
       .catch(err => {
@@ -95,6 +92,7 @@ class Home extends Component {
     if (!error) {
       return null
     }
+
     return (
       <Spacer top={1}>
         <ErrorBanner>{error.message}</ErrorBanner>
@@ -111,7 +109,6 @@ class Home extends Component {
       <Spacer top={3}>
         <Repository
           name={repo.name}
-          org={repo.org}
           description={repo.description}
           avatarURL={repo.avatarURL}
           stars={repo.stars}
@@ -128,7 +125,7 @@ class Home extends Component {
     return (
       <BaseStyles>
         <Container>
-          <br/>
+          <br />
           {this.renderHeader()}
           <Search onSubmit={this.submitHandler} />
           {this.renderError(error)}

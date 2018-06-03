@@ -1,16 +1,15 @@
 const webpack = require('webpack')
 const path = require('path')
 
-const enviroment = process.env.NODE_ENV === 'dev' ? 'development' : 'production'
-const DEVELOPMENT = true
+const DEVELOPMENT = process.env.NODE_ENV === 'development'
 const DEBUG = false
 
 module.exports = {
   target: 'web',
 
-  devtool: DEBUG ? 'source-map' : (DEVELOPMENT ? 'cheap-module-source-map' : '#hidden-source-map'),
-
-  mode: enviroment,
+  devtool: DEBUG
+    ? 'source-map'
+    : DEVELOPMENT ? 'cheap-module-source-map' : '#hidden-source-map',
 
   entry: ['babel-polyfill', './src/client/index.js'],
 

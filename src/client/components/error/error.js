@@ -8,14 +8,12 @@ import constants from './../constants'
 const ErrorWrapper = styled.div`
   display: flex;
   align-items: center;
-
-  padding: 8px 16px;
-
+  padding: ${constants.unit}px ${constants.unit * 2}px;
   background: ${constants.colors.error};
 `
 
 class Error extends Component {
-  render() {
+  render () {
     return (
       <ErrorWrapper>
         <Text>

@@ -8,7 +8,7 @@ const Root = styled.div`
 `
 
 class Footer extends Component {
-  render() {
+  render () {
     return <Root>by davesnx</Root>
   }
 }

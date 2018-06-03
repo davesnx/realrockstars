@@ -50,8 +50,7 @@ const InputWrapper = styled.div`
 
   boder-size: 3px;
   border-style: solid;
-  border-color: ${props =>
-    props.focused ? constants.colors.brand : constants.colors.grey};
+  border-color: ${props => (props.focused ? constants.colors.brand : constants.colors.grey)};
   background: ${props => (!props.focused ? constants.colors.grey : 'white')};
 
   padding: 6px 12px;
@@ -60,7 +59,7 @@ const InputWrapper = styled.div`
 `
 
 class Search extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -69,7 +68,6 @@ class Search extends Component {
   }
 
   keyPressHandler = event => {
-    console.log(event)
     const { value } = event.target
 
     if (!value || !value.includes('/')) {
@@ -101,7 +99,7 @@ class Search extends Component {
     })
   }
 
-  render() {
+  render () {
     return (
       <SearchWrapper onKeyPress={this.keyPressHandler}>
         <Label>
@@ -109,14 +107,14 @@ class Search extends Component {
         </Label>
         <Spacer top={1}>
           <InputWrapper focused={this.state.isFocused}>
-            <SearchIcon color="black" size={20} />
+            <SearchIcon color='black' size={20} />
             <Input
               onFocus={this.onFocusInputHandler}
               onBlur={this.onBlurInputHandler}
               innerRef={node => {
                 this.ref = node
               }}
-              placeholder="facebook/react"
+              placeholder='facebook/react'
             />
           </InputWrapper>
         </Spacer>

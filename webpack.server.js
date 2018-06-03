@@ -1,13 +1,10 @@
 const webpack = require('webpack')
 const path = require('path')
 const nodeExternals = require('webpack-node-externals')
-// require('dotenv')
 
-// const enviroment = process.env.NODE_ENV === 'development' ? 'development' : 'production'
+const DEVELOPMENT = process.env.NODE_ENV === 'development'
 
 module.exports = {
-  mode: 'development',
-
   devtool: 'source-map',
 
   target: 'node',
@@ -20,7 +17,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'server.js'
+    filename: 'index.js'
   },
 
   module: {
@@ -36,13 +33,5 @@ module.exports = {
         loader: 'file-loader?name=public/fonts/[name].[ext]'
       }
     ]
-  },
-
-  plugins: [
-    new webpack.BannerPlugin({
-      banner: 'require("source-map-support").install();',
-      raw: true,
-      entryOnly: false
-    })
-  ]
+  }
 }

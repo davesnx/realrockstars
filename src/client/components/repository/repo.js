@@ -1,40 +1,29 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import approxNum from 'approximate-number'
-import StarIcon from 'react-feather/dist/icons/star'
-import ListIcon from 'react-feather/dist/icons/list'
-// import StarIcon from './../icons/star.svg'
-// import LinesIcon from './../icons/code.svg'
-import CircularProgressbar from 'react-circular-progressbar'
-import Spacer from './../spacer'
-import Strong from './../strong'
-import Text from './../text'
+import PropTypes from 'prop-types'
 
+import Container from './../container'
+import Spacer from './../spacer'
+import StarIcon from './../icons/star'
+import CodeIcon from './../icons/code'
+import CircularProgress from './../circular-progress'
+import approximate from 'approximate-number'
 import constants from './../constants'
 
-const RepositoryBox = styled.div`
-  margin: 0 auto;
-
-  background: ${constants.colors.white};
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s;
-
-  display: flex;
-
-  z-index: 1;
+const Body = styled.article`
+  margin: ${constants.unit}px ${constants.unit * 2}px;
+  flex: 0 0 calc(100% - 120px - 16px);
 `
 
-const Left = styled.div`
-  width: 124px;
-  height: 124px;
-  justify-content: center;
-  display: flex;
-  align-items: center;
+const Image = styled.img`
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 `
 
-const Right = styled.div``
+const Box = styled(Container)`
+  display: flex;
+`
 
 const Header = styled.div`
   display: flex;
@@ -42,122 +31,93 @@ const Header = styled.div`
   align-items: center;
 `
 
-const Content = styled.div``
+const Bold = styled.span`
+  font-weight: bold;
+  margin-right: ${constants.unit}px;
+`
 
-const Title = styled.h2`
-  color: ${constants.colors.blue};
+const Name = styled.h3`
   margin: 0;
-  font-weight: normal;
+  margin-left: ${constants.unit * 1.5}px;
+  font-weight: 400;
 `
 
-const Avatar = styled.img`
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  border-radius: 1px;
-
-  word-wrap: break-word;
-  overflow: hidden;
-}
+const Description = styled.p`
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  line-height: 20px;
 `
 
-const Tags = styled.div`
+const Level = styled.div`
+  width: 120px;
+`
+
+const Stats = styled.div`
   display: flex;
-  justify-content: left;
-`
-
-const Label = styled.div`
-  color: ${constants.colors.black};
-
-  margin: 0;
-
-  display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `
 
-const RockstarLabel = styled.div`
-  color: ${constants.colors.brand};
+const Stat = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: ${constants.unit * 2}px;
+
+  & > svg {
+    margin-right: ${constants.unit}px;
+  }
 `
 
-class Repo extends Component {
-  render() {
+class RepositoryBox extends Component {
+  render () {
     const {
-      avatarURL,
-      org,
       name,
       description,
-      linesOfCode,
+      avatarURL,
       stars,
+      language,
+      linesOfCode,
       rockstarLevel
     } = this.props
+
     return (
-      <RepositoryBox>
-        <Left>
-          <RockstarLabel>
-            <CircularProgressbar
-              percentage={approxNum(rockstarLevel, {
-                decimal: '.',
-                round: true
-              })}
-            />
-          </RockstarLabel>
-        </Left>
-        <Right>
+      <Box>
+        <Level>
+          <CircularProgress value={rockstarLevel * 10} max={10} />
+        </Level>
+        <Body>
           <Header>
-            {this.props.avatarURL && (
-              <Avatar src={this.props.avatarURL} alt={org} />
-            )}
-            <Spacer left={this.props.avatarURL ? 1 : 0}>
-              <Title>{`${org}/${name}`}</Title>
-            </Spacer>
+            <Image src={avatarURL} alt={name} />
+            <Name>{name}</Name>
           </Header>
-          <Content>
-            <Spacer top={2} bottom={3}>
-              <Text>{description}</Text>
-            </Spacer>
-            <Tags>
-              <Label>
-                <ListIcon />
-                <Spacer left={1}>
-                  <Strong>{approxNum(linesOfCode)}</Strong> Lines
-                </Spacer>
-              </Label>
-              <Spacer left={3}>
-                <Label>
-                  <StarIcon />
-                  <Spacer left={1}>
-                    <Strong>{approxNum(stars)}</Strong> Stars
-                  </Spacer>
-                </Label>
-              </Spacer>
-            </Tags>
-          </Content>
-        </Right>
-      </RepositoryBox>
+          <Description>{description}</Description>
+          <Spacer top={1}>
+            <Stats>
+              <Stat>
+                <CodeIcon />
+                <Bold>{approximate(linesOfCode)}</Bold> lines
+              </Stat>
+              <Stat>
+                <StarIcon />
+                <Bold>{approximate(stars)}</Bold> stars
+              </Stat>
+            </Stats>
+          </Spacer>
+        </Body>
+      </Box>
     )
   }
 }
 
-Repo.propTypes = {
+RepositoryBox.propTypes = {
   name: PropTypes.string,
-  org: PropTypes.string,
   description: PropTypes.string,
   avatarURL: PropTypes.string,
   stars: PropTypes.number,
-  language: PropTypes.string,
   linesOfCode: PropTypes.number,
   rockstarLevel: PropTypes.number
 }
 
-Repo.defaultProps = {
-  name: 'repo',
-  org: 'org',
-  description: 'Short description',
-  stars: 0,
-  language: 'en',
-  linesOfCode: 0,
-  rockstarLevel: 100
-}
-
-export default Repo
+export default RepositoryBox

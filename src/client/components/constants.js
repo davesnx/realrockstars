@@ -65,8 +65,7 @@ const constants = {
   shadows: {
     shadow1: '0 2px 4px rgba(0,0,0, .08)',
     shadow2: '0 2px 4px rgba(0,0,0,.08), 0 2px 12px rgba(0,0,0,0.06)',
-    shadow3:
-      '0 2px 4px rgba(0,0,0,.08), 0 2px 12px rgba(0,0,0,0.06), 0 8px 14px rgba(0,0,0,0.04), 0 12px 16px rgba(0,0,0,.02)'
+    shadow3: '0 2px 4px rgba(0,0,0,.08), 0 2px 12px rgba(0,0,0,0.06), 0 8px 14px rgba(0,0,0,0.04), 0 12px 16px rgba(0,0,0,.02)'
   },
 
   innerSpaces: {
@@ -81,7 +80,7 @@ const constants = {
     lg: 'border-radius: 4px;'
   },
 
-  unitize(quantity) {
+  unitize (quantity) {
     return quantity ? quantity * this.unit + 'px' : null
   }
 }
