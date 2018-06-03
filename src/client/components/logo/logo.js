@@ -3,18 +3,18 @@ import styled from 'styled-components'
 import constants from './../constants'
 
 const LogoWrapper = styled.span`
-  font-size: 24px;
+  font-size: 30px;
   color: ${constants.colors.brand};
 `
 
 const H1 = styled.h1`
   display: inline;
   color: ${constants.colors.brand};
-  font-size: 24px;
+  font-size: 30px;
 `
 
 class Logo extends Component {
-  render() {
+  render () {
     return (
       <LogoWrapper>
         <H1>RealRockstars</H1>.io

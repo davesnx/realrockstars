@@ -12,7 +12,6 @@ const Text = styled.p`
   color: ${props => props.color};
   font-size: 35px;
   font-weight: 600;
-  letter-spacing: -5px;
 `
 
 const Svg = styled.svg`

@@ -39,22 +39,22 @@ const fetchRepositoryMiddleware = (req, res) => {
         rockstarLevel: 97365 / 136392
       }
     })
+  } else {
+    repo.info((error, data) => {
+      res.send({
+        data: {
+          name: data.full_name,
+          description: data.description,
+          avatarURL: data.owner.avatar_url,
+          stars: data.stargazers_count,
+          linesOfCode: data.size,
+          rockstarLevel: data.stargazers_count / data.size
+        },
+        OK: !error,
+        error: error && error.message
+      })
+    })
   }
-
-  // repo.info((error, data) => {
-  //   res.send({
-  //     data: {
-  //       name: data.full_name,
-  //       description: data.description,
-  //       avatarURL: data.owner.avatar_url,
-  //       stars: data.stargazers_count,
-  //       linesOfCode: data.size,
-  //       rockstarLevel: data.stargazers_count / data.size
-  //     },
-  //     OK: !error,
-  //     error: error && error.message
-  //   })
-  // })
 }
 
 const renderFrontendMiddleware = (_, res) => {

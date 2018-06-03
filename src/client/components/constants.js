@@ -8,6 +8,7 @@ const constants = {
     darkishBlue: '#0000ff',
     grey: '#E6E6E6',
     brand: '#E66902',
+    lightbrand: '#FFF7F1',
 
     // Error colors
     error: '#D95767',

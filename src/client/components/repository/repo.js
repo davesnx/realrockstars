@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+import approximate from 'approximate-number'
 
-import Container from './../container'
 import Spacer from './../spacer'
 import StarIcon from './../icons/star'
 import CodeIcon from './../icons/code'
 import CircularProgress from './../circular-progress'
-import approximate from 'approximate-number'
+import Stat from './../stat'
+import Bold from './../bold'
 import constants from './../constants'
 
 const Body = styled.article`
@@ -21,7 +22,7 @@ const Image = styled.img`
   border-radius: 50%;
 `
 
-const Box = styled(Container)`
+const Box = styled.div`
   display: flex;
 `
 
@@ -29,11 +30,6 @@ const Header = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-`
-
-const Bold = styled.span`
-  font-weight: bold;
-  margin-right: ${constants.unit}px;
 `
 
 const Name = styled.h3`
@@ -57,17 +53,6 @@ const Stats = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-`
-
-const Stat = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: ${constants.unit * 2}px;
-
-  & > svg {
-    margin-right: ${constants.unit}px;
-  }
 `
 
 class RepositoryBox extends Component {

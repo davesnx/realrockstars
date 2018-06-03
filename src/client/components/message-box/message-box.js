@@ -1,35 +1,40 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import styled from 'styled-components'
-import Parser from 'html-react-parser'
 
-import constants from './constants'
-import Text from './text'
-import Spacer from './spacer'
+import Stat from './../stat'
+import StarIcon from './../icons/star'
+import CodeIcon from './../icons/code'
+import constants from './../constants'
+import Text from './../text'
+import Spacer from './../spacer'
 
 const messageMaxWidths = {
   xlg: `${constants.areas.lg * constants.unit}px`
 }
 
 const MessageCard = styled.div`
-  ${props => `background-color: ${constants.colors.grey1}`};
+  ${props => `background-color: ${constants.colors.lightbrand}`};
   ${props => `color: ${constants.colors.body}`};
   ${props => props.maxWidth === 'xlg' && `max-width: ${messageMaxWidths[props.maxWidth]}`};
-  ${constants.borderRadiuses.sm};
   ${constants.innerSpaces.sm};
+
+  & * {
+    ${props => `color: ${constants.colors.brand}`};
+  }
 `
 
-const MessageBox = ({ type, maxWidth, title, description }) => (
+const MessageBox = ({ type, maxWidth, title, children }) => (
   <MessageCard type={type} maxWidth={maxWidth}>
     {title &&
       <Spacer bottom={1}>
-        <Text type={type} size={'size2'} fontWeight='bold'>
+        <Text inline type={type} size={'size2'} fontWeight='bold'>
           {title}
         </Text>
       </Spacer>}
-    {description &&
+    {children &&
       <Text dimmed size={'size1'}>
-        {Parser(description)}
+        {children}
       </Text>}
   </MessageCard>
 )
@@ -44,7 +49,7 @@ MessageBox.defaultProps = {
 MessageBox.propTypes = {
   maxWidth: PropTypes.string,
   title: PropTypes.string,
-  description: PropTypes.string
+  children: PropTypes.string
 }
 
 export default MessageBox

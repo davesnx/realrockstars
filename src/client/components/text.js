@@ -24,17 +24,6 @@ const Text = styled.div`
   ${props => (props.italic ? 'font-style: italic;' : '')};
   ${props => props.align && `text-align: ${props.align};`};
   ${props => (props.cursor === 'pointer' ? `cursor: pointer;` : props.cursor === 'default' ? `cursor: default;` : props.cursor === 'noEvents' ? 'pointer-events: none;' : '')}
-
-  & > a {
-    color: ${constants.colors.darkishBlue};
-    text-decoration: none;
-
-    :hover {
-      border-bottom: 1px solid ${constants.colors.darkishBlue};
-    }
-  }
-
-
 `
 
 export default Text

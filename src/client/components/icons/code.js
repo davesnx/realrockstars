@@ -1,14 +1,13 @@
 import React from 'react'
 
-const Icon = () => (
+const Icon = ({ width = 20, height = 20, color = '#222' }) => (
   <svg
-    width='24'
-    height='13'
+    width={width}
+    height={height}
     viewBox='0 0 24 13'
     xmlns='http://www.w3.org/2000/svg'
   >
-    <title>Code</title>
-    <g fill='#222' fillRule='evenodd'>
+    <g fill={color} fillRule={color}>
       <rect width='14' height='3' rx='1.5' />
       <rect opacity='.5' x='16' width='8' height='3' rx='1.5' />
       <rect opacity='.5' y='10' width='7' height='3' rx='1.5' />

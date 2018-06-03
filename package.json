@@ -4,10 +4,13 @@
     "clean": "rm -rf build",
     "storybook": "start-storybook -p 6006",
     "dev": "nodemon --watch build --exec \"node build/index.js\"",
-    "start": "concurrently 'npm run build:client' 'npm run build:server' 'npm run dev'",
+    "start":
+      "concurrently 'npm run build:client' 'npm run build:server' 'npm run dev'",
     "serve": "node build/index.js",
-    "build:client": "webpack --config webpack.client.js --mode development --watch",
-    "build:server": "webpack --config webpack.server.js --mode development --watch",
+    "build:client":
+      "webpack --config webpack.client.js --mode development --watch",
+    "build:server":
+      "webpack --config webpack.server.js --mode development --watch",
     "build": "webpack --config webpack.server.js --mode production"
   },
   "dependencies": {
@@ -15,7 +18,6 @@
     "babel-runtime": "^6.26.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "html-react-parser": "^0.4.3",
     "node-fetch": "^2.1.2",
     "octonode": "^0.9.2",
     "prop-types": "^15.5.10",

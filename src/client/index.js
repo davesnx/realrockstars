@@ -1,19 +1,22 @@
 import ReactDOM from 'react-dom'
 import React, { Fragment, Component } from 'react'
 import styled, { injectGlobal } from 'styled-components'
-import Parser from 'html-react-parser'
 import styledNormalize from 'styled-normalize'
 // import { Transition, animated } from 'react-spring'
 
 import Logo from './components/logo/logo'
 import Repository from './components/repository/repo'
 import Search from './components/search/search'
-import MessageBox from './components/message-box'
+import MessageBox from './components/message-box/message-box'
+import StarIcon from './components/icons/star'
+import CodeIcon from './components/icons/code'
+import Bold from './components/bold'
 import Spacer from './components/spacer'
 import ErrorBanner from './components/error/error'
 import Container from './components/container'
 import BaseStyles from './components/base-styles'
 import { httpPost } from './lib/api'
+import constants from './components/constants'
 
 injectGlobal`
   ${styledNormalize}
@@ -38,6 +41,16 @@ injectGlobal`
 `
 
 const IS_RUNNING_ON_BROWSER = typeof document === 'object'
+
+const InlineIcon = styled.div`
+  display: inline-flex;
+  align-items: baseline;
+  margin: 0 -${constants.unit / 2}px;
+
+  & > svg {
+    margin: 0 ${constants.unit / 2}px;
+  }
+`
 
 class Home extends Component {
   constructor (props) {
@@ -75,14 +88,58 @@ class Home extends Component {
       <Fragment>
         <Logo />
         <Spacer top={4} bottom={4}>
-          <MessageBox
-            title={`What's a real rockstar?`}
-            description={`
-            <strong>A developer who has a project with more stars than lines of code.</strong>
-            <br/><br/>
-            <a href='http://wikipedia.com/Linus_torvalds'>Linus Torvalds</a> made <a href='http://wikipedia.com/linux'>Linux</a>'s Kernel and potentially is a rockstar, but not a realrockstar... the project has <strong>24M lines of code</strong> and <strong>"only" 46,253 github stars, </strong>that's a 0.08 of realrockstar level
-          `}
-          />
+          <MessageBox title={`What's a real rockstar?`}>
+            <Fragment>
+              A developer who has a project with more stars than lines of code.
+              <br />
+              <br />
+              So... If you have a repo with <InlineIcon>
+                <StarIcon
+                  width={14}
+                  height={13}
+                  color={constants.colors.brand}
+                />
+                <Bold>10 stars</Bold>
+              </InlineIcon> and only <InlineIcon>
+                <CodeIcon
+                  width={16}
+                  height={12}
+                  color={constants.colors.brand}
+                />
+                <Bold>3 lines of code</Bold>
+              </InlineIcon>, you are a fucking rockstar.
+              <br />
+              <br />
+              Even
+              {' '}
+              <a href='http://wikipedia.com/Linus_torvalds'>Linus Torvalds</a>
+              {' '}
+              that made
+              {' '}
+              <a href='http://wikipedia.com/linux'>Linux</a>
+              's Kernel isn't a realrockstar. The project has
+              {' '}
+              <InlineIcon>
+                <CodeIcon
+                  width={16}
+                  height={12}
+                  color={constants.colors.brand}
+                />
+                <Bold>24M lines of code</Bold>
+              </InlineIcon>
+              {' '}
+              and
+              {' '}
+              <InlineIcon>
+                <StarIcon
+                  width={14}
+                  height={13}
+                  color={constants.colors.brand}
+                />
+                <Bold>46,253 stars</Bold>
+              </InlineIcon> that's a 0.08 of realrockstar level
+            </Fragment>
+          </MessageBox>
         </Spacer>
       </Fragment>
     )
