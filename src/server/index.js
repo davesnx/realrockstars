@@ -5,15 +5,14 @@ import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { ServerStyleSheet } from 'styled-components'
 import path from 'path'
-import URL from 'url'
 import octonode from 'octonode'
 import { port, address } from './../../config'
 
-import __document from './document'
-import App from './../client'
+import Html from './html'
+import App from './../client/app'
 
 const server = express()
-const github = octonode.client() // https://github.com/pksunkara/octonode
+const github = octonode.client()
 
 // github.limit((err, left, max, reset) => {
 //   console.log(left)
@@ -62,11 +61,12 @@ const renderFrontendMiddleware = (_, res) => {
   const body = renderToString(sheet.collectStyles(<App />))
   const styles = sheet.getStyleTags()
 
-  res.send(__document({ body, styles }))
+  res.send(Html({ body, styles }))
 }
 
 server.use(bodyParser.json())
-server.use(express.static('public'))
+server.use(express.static('build/public'))
+server.use(express.static('static'))
 server.get('/', renderFrontendMiddleware)
 server.post('/repo', fetchRepositoryMiddleware)
 

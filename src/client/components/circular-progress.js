@@ -10,7 +10,7 @@ const Text = styled.p`
   margin: 0;
 
   color: ${props => props.color};
-  font-size: 35px;
+  font-size: 28px;
   font-weight: 600;
 `
 

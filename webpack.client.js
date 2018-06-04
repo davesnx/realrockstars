@@ -14,7 +14,7 @@ module.exports = {
   entry: ['babel-polyfill', './src/client/index.js'],
 
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, 'static'),
     filename: 'bundle.js'
   },
 
@@ -28,7 +28,7 @@ module.exports = {
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
         exclude: /node_modules/,
-        loader: 'file-loader?name=public/fonts/[name].[ext]'
+        loader: 'file-loader?name=static/fonts/[name].[ext]'
       }
     ]
   }

@@ -1,12 +1,11 @@
-import { Helmet } from 'react-helmet'
+// import { Helmet } from 'react-helmet'
 
-const __Document = ({ head, body, styles }) =>
-  `
-<!doctype html>
+const Html = ({ head, body, styles }) =>
+  `<!doctype html>
   <html lang="en">
     <head>
       <title>realrockstars.io</title>
-      <styles>${styles}</styles>
+      ${styles}
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
     </head>
@@ -17,4 +16,4 @@ const __Document = ({ head, body, styles }) =>
   </html>
 `
 
-export default __Document
+export default Html
