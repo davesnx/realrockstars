@@ -3,11 +3,11 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import React from 'react'
 import { renderToString } from 'react-dom/server'
-import { ServerStyleSheet } from 'styled-components'
+import { renderStylesToString } from 'emotion-server'
 import path from 'path'
 import octonode from 'octonode'
-import { port, address } from './../../config'
 
+import { port, address } from './../../config'
 import Html from './html'
 import App from './../client/app'
 
@@ -22,9 +22,13 @@ const github = octonode.client()
 
 const IS_DEV = process.env.NODE_ENV === 'development'
 
+import createGlobalStyles from './../client/create-global-styles'
+
 const fetchRepositoryMiddleware = (req, res) => {
   const { org, name } = req.body
   const repo = github.repo(`${org}/${name}`)
+
+  // createGlobalStyles()
 
   if (IS_DEV) {
     res.send({
@@ -57,15 +61,13 @@ const fetchRepositoryMiddleware = (req, res) => {
 }
 
 const renderFrontendMiddleware = (_, res) => {
-  const sheet = new ServerStyleSheet()
-  const body = renderToString(sheet.collectStyles(<App />))
-  const styles = sheet.getStyleTags()
+  const body = renderStylesToString(renderToString(<App />))
 
-  res.send(Html({ body, styles }))
+  res.send(Html(body))
 }
 
 server.use(bodyParser.json())
-server.use(express.static('build/public'))
+server.use(express.static('build/client'))
 server.use(express.static('static'))
 server.get('/', renderFrontendMiddleware)
 server.post('/repo', fetchRepositoryMiddleware)

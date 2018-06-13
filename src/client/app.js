@@ -1,6 +1,4 @@
 import React, { Fragment, Component } from 'react'
-import { injectGlobal } from 'styled-components'
-import styledNormalize from 'styled-normalize'
 // import { Transition, animated } from 'react-spring'
 
 import Header from './header'
@@ -12,28 +10,6 @@ import Container from './components/container'
 import BaseStyles from './components/base-styles'
 import constants from './components/constants'
 import { httpPost } from './lib/api'
-
-injectGlobal`
-  ${styledNormalize}
-
-  @font-face {
-    font-family: 'SF Mono';
-    src: url('./fonts/SFMono-Regular.woff2') format('woff2'),
-      url('./fonts/SFMono-Regular.woff') format('woff'),
-      url('./fonts/SFMono-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: italic;
-  }
-
-  @font-face {
-    font-family: 'SF Mono';
-    src: url('./fonts/SFMono-Bold.woff2') format('woff2'),
-      url('./fonts/SFMono-Bold.woff') format('woff'),
-      url('./fonts/SFMono-Bold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-  }
-`
 
 class App extends Component {
   constructor (props) {

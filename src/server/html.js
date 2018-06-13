@@ -1,11 +1,10 @@
 // import { Helmet } from 'react-helmet'
 
-const Html = ({ head, body, styles }) =>
+const Html = ({ body }) =>
   `<!doctype html>
   <html lang="en">
     <head>
       <title>realrockstars.io</title>
-      ${styles}
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
     </head>

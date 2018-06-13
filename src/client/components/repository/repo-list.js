@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled from 'react-emotion'
 import Repo from './item'
 
 const List = styled.div``

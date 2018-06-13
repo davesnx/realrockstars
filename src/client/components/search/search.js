@@ -1,18 +1,13 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled from 'react-emotion'
 import R from 'ramda'
-import _SearchIcon from 'react-feather/dist/icons/search'
+import SearchIcon from 'react-feather/dist/icons/search'
 // import MaskedInput from 'react-text-mask'
 import Spacer from './../spacer'
 import Strong from './../strong'
 // import emailMask from 'text-mask-addons/dist/emailMask'
 
 import constants from './../constants'
-
-const SearchIcon = styled(_SearchIcon)`
-  width: 20px;
-  height: 20px;
-`
 
 // const Input = styled(MaskedInput)`
 const Input = styled.input`
@@ -22,7 +17,7 @@ const Input = styled.input`
 
   width: 100%;
   height: 45px;
-  font-size: 16px;
+  font-size: 20px;
 
   color: ${constants.colors.black};
   background-image: none;
@@ -37,10 +32,9 @@ const Input = styled.input`
   transition: all 150ms linear;
 `
 
-const SearchWrapper = styled.div``
-
 const Label = styled.div`
   color: ${constants.colors.black};
+  font-size: 14px;
 `
 
 const InputWrapper = styled.div`
@@ -101,7 +95,7 @@ class Search extends Component {
 
   render () {
     return (
-      <SearchWrapper onKeyPress={this.keyPressHandler}>
+      <div onKeyPress={this.keyPressHandler}>
         <Label>
           <Strong>Search</Strong> for a repository
         </Label>
@@ -118,7 +112,7 @@ class Search extends Component {
             />
           </InputWrapper>
         </Spacer>
-      </SearchWrapper>
+      </div>
     )
   }
 }

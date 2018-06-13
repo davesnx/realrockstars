@@ -1,5 +1,5 @@
 {
-  "ignore": ["node_modules", "build"],
+  "ignore": ["node_modules"],
   "presets": [
     "react",
     [
@@ -12,13 +12,10 @@
     ]
   ],
   "plugins": [
-    [
-      "styled-components",
-      { "ssr": true, "displayName": true, "preprocess": false }
-    ],
     "ramda",
     "transform-async-to-generator",
     "transform-class-properties",
-    "transform-object-rest-spread"
+    "transform-object-rest-spread",
+    "emotion"
   ]
 }

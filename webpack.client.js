@@ -2,7 +2,7 @@ const webpack = require('webpack')
 const path = require('path')
 
 const DEVELOPMENT = process.env.NODE_ENV === 'development'
-const DEBUG = false
+const DEBUG = true
 
 module.exports = {
   target: 'web',
@@ -14,7 +14,7 @@ module.exports = {
   entry: ['babel-polyfill', './src/client/index.js'],
 
   output: {
-    path: path.resolve(__dirname, 'static'),
+    path: path.resolve(__dirname, 'build', 'client'),
     filename: 'bundle.js'
   },
 

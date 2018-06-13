@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled from 'react-emotion'
 
 const Button = styled.button`
   position: relative;
   display: inline-block;
   margin: 0;
-  padding: 0 15px;
+  padding: 0 150px;
   height: 28px;
   line-height: 1.5;
   touch-action: manipulation;

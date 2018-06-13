@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styled from 'styled-components'
+import styled from 'react-emotion'
 import PropTypes from 'prop-types'
 import approximate from 'approximate-number'
 
@@ -42,7 +42,7 @@ const Description = styled.p`
   margin-top: 8px;
   margin-bottom: 8px;
   font-size: 14px;
-  line-height: 20px;
+  line-height: 22px;
 `
 
 const Level = styled.div`

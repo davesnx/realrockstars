@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'react-emotion'
 
 import Stat from './../stat'
 import StarIcon from './../icons/star'
@@ -15,9 +15,9 @@ const messageMaxWidths = {
 
 const MessageCard = styled.div`
   ${props => `background-color: ${constants.colors.lightbrand}`};
-  ${props => `color: ${constants.colors.body}`};
+  ${props => `color: ${constants.colors.brand}`};
   ${props => props.maxWidth === 'xlg' && `max-width: ${messageMaxWidths[props.maxWidth]}`};
-  ${constants.innerSpaces.sm};
+  padding: 26px 32px;
 
   & * {
     ${props => `color: ${constants.colors.brand}`};
@@ -28,12 +28,12 @@ const MessageBox = ({ type, maxWidth, title, children }) => (
   <MessageCard type={type} maxWidth={maxWidth}>
     {title &&
       <Spacer bottom={1}>
-        <Text inline type={type} size={'size2'} fontWeight='bold'>
+        <Text inline type={type} size={'size0'} fontWeight='bold'>
           {title}
         </Text>
       </Spacer>}
     {children &&
-      <Text dimmed size={'size1'}>
+      <Text dimmed size={'size0'}>
         {children}
       </Text>}
   </MessageCard>
@@ -48,8 +48,7 @@ MessageBox.defaultProps = {
 
 MessageBox.propTypes = {
   maxWidth: PropTypes.string,
-  title: PropTypes.string,
-  children: PropTypes.string
+  title: PropTypes.string
 }
 
 export default MessageBox

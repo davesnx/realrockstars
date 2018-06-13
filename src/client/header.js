@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import styled from 'styled-components'
+import styled from 'react-emotion'
 
 import Logo from './components/logo/logo'
 
@@ -12,7 +12,7 @@ import constants from './components/constants'
 
 const InlineIcon = styled.div`
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   margin: 0 -${constants.unit / 2}px;
 
   & > svg {
