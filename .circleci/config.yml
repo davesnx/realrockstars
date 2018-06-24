@@ -1,0 +1,17 @@
+# Javascript Node CircleCI 2.0 configuration file
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+
+version: 2
+jobs:
+  build:
+    machine: true
+    steps:
+      - checkout
+
+      - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
+
+      # build the application image
+      - run: docker build -t davesnx/realrockstars.io:$CIRCLE_BRANCH .
+
+      # deploy the image
+      - run: docker push davesnx/realrockstars.io:$CIRCLE_BRANCH

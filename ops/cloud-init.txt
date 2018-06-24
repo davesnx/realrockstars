@@ -1,0 +1,32 @@
+#cloud-config
+
+package_upgrade: true
+
+users:
+  - name: david
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCsAtTipnGyK4ABXhuMTANTyjzZwhKgsOEeD8YxvJ5e3N9SKx6auXREk7ZJ6JnNEmmlzLd+iqnCkZk8gvV5ZcYRFjFqf2ijZMt+PFDVkQr+Ipg5r3HYBx+SKVjrxgA4G+un2MHtVAqnqxJ4VJvl/kEi7ng1A6R2ZQRznfcipUzyPQ306m8qIhS+g2HUsOcvk9n5lSXJz72cuzoG9ZG8FgYTTGdZnADZGPAPq/UduIJeHY5yQLpo6IdoHVEq1gAc+Zbyx6/ufeRtXx2n9P145k7cVtOQa/l3MzC+ENszz28aRZ3lL2VIQ54fwCY1Z+FL3T9mKJU03+V85eCLAK/5WfR10Qcbgzj+T/2lJQhPWHDE/PG1iyPC8XFEoaLPx2H1oXVKIzEQA8sIp2IKknFwy/XlwSuBfXVelsyQ86gXMWJcwnUDYg43kqQK/9cux8Uh2lAGJISAgKpsIeDhPbASLuoJNlvUqUhzksuqaZphJ+ipPkhGOg6VJwvKWUjQNqsihpcuAnFczqMD4N4DfTyAzTptE9yzjtJ+n7jTdramv5cJje/MI0U+KvVKCo8cK6aTnA1Aai7Lp/IYneydFNQXnZfcX7P9+u/jFgro7QJqCRRgnp+GdVb5LA5grXHcNGLbs8I5i/qO93yJZHVa8g3dvPbAhmNRxW4DkISHTBFFczcqaQ== dsnxmoreno@gmail.com
+    sudo: ['ALL=(ALL) NOPASSWD:ALL']
+    groups: sudo,docker
+    shell: /bin/bash
+
+runcmd:
+  - sed -i -e '/^PermitRootLogin/s/^.*$/PermitRootLogin no/' /etc/ssh/sshd_config
+  - sed -i -e '/^PasswordAuthentication/s/^.*$/PasswordAuthentication no/' /etc/ssh/sshd_config
+  - sed -i -e '$aAllowUsers david' /etc/ssh/sshd_config
+  - restart ssh
+
+packages: ['docker-ce']
+
+apt:
+  preserve_sources_list: true
+
+  sources:
+    curtin-dev-ppa.list:
+      source: "deb [arch=amd64] https://download.docker.com/linux/ubuntu $RELEASE stable"
+      keyid: 0EBFCD88 # GPG key ID published on a key server
+
+power_state:
+  delay: "now"
+  mode: reboot
+  message: First reboot

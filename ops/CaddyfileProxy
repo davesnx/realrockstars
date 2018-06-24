@@ -1,0 +1,4 @@
+realrockstars.io {
+    gzip
+    proxy / {{ docker-container-name }}:80
+}

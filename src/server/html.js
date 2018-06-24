@@ -1,6 +1,6 @@
 // import { Helmet } from 'react-helmet'
 
-const Html = ({ body }) =>
+const Html = body =>
   `<!doctype html>
   <html lang="en">
     <head>
