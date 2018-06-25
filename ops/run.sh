@@ -12,10 +12,11 @@ docker run -d \
   -v /home/david/volumes/proxy/caddy:/root/.caddy \
   abiosoft/caddy
 
-docker run -d --name app \
-  -p 80:8000 \
+docker run -d \
   --restart=always \
   --network=intranet \
-  crccheck/hello-world
+  --name app \
+  -p 1234:1234 \
+  davesnx/realrockstars.io:ea8a2475db7a0cdb11bc2c2115ab07594c7fbc22
 
 docker pull davesnx/realrockstars.io

@@ -10,7 +10,7 @@ jobs:
       - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
 
       # build the application image
-      - run: docker build -t davesnx/realrockstars.io:$CIRCLE_SHA1 .
+      - run: docker build -t davesnx/realrockstars.io:$CIRCLE_BUILD_NUM .
 
       # deploy the image
-      - run: docker push davesnx/realrockstars.io:$CIRCLE_SHA1
+      - run: docker push davesnx/realrockstars.io:$CIRCLE_BUILD_NUM

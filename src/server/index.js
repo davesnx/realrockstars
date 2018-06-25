@@ -21,7 +21,7 @@ const github = octonode.client()
 //   console.log(reset);  // 1372700873 (UTC epoch seconds)
 // })
 
-const IS_DEV = process.env.NODE_ENV !== 'development'
+const IS_DEV = process.env.NODE_ENV === 'development'
 
 const fetchRepositoryMiddleware = (req, res) => {
   const { org, name } = req.body
@@ -29,7 +29,7 @@ const fetchRepositoryMiddleware = (req, res) => {
 
   if (IS_DEV) {
     res.send({
-      OK: true,
+      OK: R.T,
       data: {
         name: 'facebook/react',
         description: 'A declarative, efficient, and flexible JavaScript library for building user interfaces.',
@@ -55,6 +55,7 @@ const fetchRepositoryMiddleware = (req, res) => {
         )
 
         res.send({
+          OK: R.T,
           data: R.applySpec({
             name: R.prop('full_name'),
             description: R.prop('description'),
@@ -62,8 +63,7 @@ const fetchRepositoryMiddleware = (req, res) => {
             stars: R.prop('stargazers_count'),
             linesOfCode: R.prop('size'),
             rockstarLevel: calculateRockstarLevel
-          })(data),
-          OK: true
+          })(data)
         })
       }
     })
