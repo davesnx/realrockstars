@@ -1,7 +1,7 @@
 docker network create intranet
 
-docker stop proxy
-docker rm proxy
+# docker stop proxy
+# docker rm proxy
 
 docker run -d \
   --name proxy \
@@ -17,6 +17,4 @@ docker run -d \
   --network=intranet \
   --name app \
   -p 1234:1234 \
-  davesnx/realrockstars.io:ea8a2475db7a0cdb11bc2c2115ab07594c7fbc22
-
-docker pull davesnx/realrockstars.io
+  davesnx/realrockstars.io:4
