@@ -47,7 +47,6 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "concurrently": "^3.5.1",
-    "dotenv": "^5.0.1",
     "isomorphic-style-loader": "^4.0.0",
     "nodemon": "^1.17.3",
     "react-addons-css-transition-group": "^15.6.2",

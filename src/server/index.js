@@ -6,6 +6,7 @@ import { renderToString } from 'react-dom/server'
 import { renderStylesToString } from 'emotion-server'
 import path from 'path'
 import octonode from 'octonode'
+import R from 'ramda'
 
 import { port, address } from './../../config'
 import Html from './html'
@@ -20,15 +21,11 @@ const github = octonode.client()
 //   console.log(reset);  // 1372700873 (UTC epoch seconds)
 // })
 
-const IS_DEV = process.env.NODE_ENV === 'development'
-
-import createGlobalStyles from './../client/create-global-styles'
+const IS_DEV = process.env.NODE_ENV !== 'development'
 
 const fetchRepositoryMiddleware = (req, res) => {
   const { org, name } = req.body
   const repo = github.repo(`${org}/${name}`)
-
-  // createGlobalStyles()
 
   if (IS_DEV) {
     res.send({
@@ -44,18 +41,31 @@ const fetchRepositoryMiddleware = (req, res) => {
     })
   } else {
     repo.info((error, data) => {
-      res.send({
-        data: {
-          name: data.full_name,
-          description: data.description,
-          avatarURL: data.owner.avatar_url,
-          stars: data.stargazers_count,
-          linesOfCode: data.size,
-          rockstarLevel: data.stargazers_count / data.size
-        },
-        OK: !error,
-        error: error && error.message
-      })
+      if (error) {
+        res.send({
+          OK: !error,
+          error: error && error.message
+        })
+      } else {
+        const restrictFrom0To1 = R.clamp(0, 1)
+
+        const calculateRockstarLevel = R.pipe(
+          R.converge(R.divide, [R.prop('stargazers_count'), R.prop('size')]),
+          restrictFrom0To1
+        )
+
+        res.send({
+          data: R.applySpec({
+            name: R.prop('full_name'),
+            description: R.prop('description'),
+            avatarURL: R.pipe(R.prop('owner'), R.prop('avatar_url')),
+            stars: R.prop('stargazers_count'),
+            linesOfCode: R.prop('size'),
+            rockstarLevel: calculateRockstarLevel
+          })(data),
+          OK: true
+        })
+      }
     })
   }
 }
