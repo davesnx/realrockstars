@@ -27,29 +27,28 @@ class App extends Component {
     httpPost('/repo', { org, name })
       .then(response => {
         this.setState({
+          hasError: false,
           hasResult: true,
           data: response.data
         })
       })
-      .catch(err => {
+      .catch(response => {
         this.setState({
-          data: {
-            hasResult: false,
-            hasError: true,
-            error: err.message
-          }
+          hasResult: false,
+          hasError: true,
+          error: response.error
         })
       })
   }
 
-  renderError (error) {
-    if (!error) {
+  renderError (hasError, error) {
+    if (!hasError) {
       return null
     }
 
     return (
       <Spacer top={1}>
-        <ErrorBanner>{error.message}</ErrorBanner>
+        <ErrorBanner>{error}</ErrorBanner>
       </Spacer>
     )
   }
@@ -75,13 +74,13 @@ class App extends Component {
   }
 
   render () {
-    const { hasResult, data, error } = this.state
+    const { hasResult, data, hasError, error } = this.state
     return (
       <BaseStyles>
         <Container>
           <Header />
           <Search onSubmit={this.submitHandler} />
-          {this.renderError(error)}
+          {this.renderError(hasError, error)}
           {this.renderResult(hasResult, data)}
         </Container>
       </BaseStyles>
