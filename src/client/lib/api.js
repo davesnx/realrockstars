@@ -1,7 +1,5 @@
 import fetch from 'node-fetch'
-import { port, address } from './../../../config'
-
-// const API_ADDRESS = `${address}:${port}`
+import { URL } from './../../../config'
 
 export async function httpPost (resource, body) {
   const bodyString = JSON.stringify(body)
@@ -16,7 +14,7 @@ export async function httpPost (resource, body) {
 }
 
 function _fetch (resource, method = 'GET', body) {
-  return fetch(resource, {
+  return fetch(URL + resource, {
     method,
     headers: {
       'Content-Type': 'application/json'

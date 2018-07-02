@@ -14,6 +14,7 @@ injectGlobal`
       url('./fonts/SFMono-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
+    font-display: swap;
   }
 
   @font-face {
@@ -23,6 +24,7 @@ injectGlobal`
       url('./fonts/SFMono-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
+    font-display: swap;
   }
 `
 

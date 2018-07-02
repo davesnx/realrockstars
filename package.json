@@ -3,13 +3,13 @@
   "scripts": {
     "clean": "rm -rf build",
     "storybook": "start-storybook -p 6006",
-    "dev": "nodemon --watch build --exec \"node build/server/bundle.js\"",
-    "start": "concurrently 'npm run build:client' 'npm run build:server' 'npm run dev'",
+    "dev": "nodemon --on-change-only --exec \"node build/server/bundle.js\"",
+    "start": "npm run clean; concurrently 'npm run build:server:dev' 'npm run build:client:dev' 'npm run dev'",
     "serve": "node build/server/bundle.js",
-    "build:client": "webpack --config webpack.client.js --mode development --watch",
-    "build:server": "webpack --config webpack.server.js --mode development --watch",
-    "build": "webpack --config webpack.server.js --mode production",
-    "prebuild": "webpack --config webpack.client.js --mode production"
+    "build:client:dev": "webpack --config webpack.client.js --mode development --watch",
+    "build:server:dev": "webpack --config webpack.server.js --mode development --watch",
+    "build:server:prod": "webpack --config webpack.server.js --mode production",
+    "build:client:prod": "webpack --config webpack.client.js --mode production"
   },
   "dependencies": {
     "approximate-number": "^2.0.0",

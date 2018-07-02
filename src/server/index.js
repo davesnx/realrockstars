@@ -8,7 +8,7 @@ import path from 'path'
 import octonode from 'octonode'
 import R from 'ramda'
 
-import { port, address } from './../../config'
+import { URL, port } from './../../config'
 import Html from './html'
 import App from './../client/app'
 
@@ -23,13 +23,16 @@ const github = octonode.client()
 
 const IS_DEV = process.env.NODE_ENV === 'development'
 
+// console.log(process.env.ADDRESS)
+// console.log(process.env.PORT)
+
 const fetchRepositoryMiddleware = (req, res) => {
   const { org, name } = req.body
   const repo = github.repo(`${org}/${name}`)
 
   if (IS_DEV) {
     res.send({
-      OK: R.T,
+      OK: R.T(),
       data: {
         name: 'facebook/react',
         description: 'A declarative, efficient, and flexible JavaScript library for building user interfaces.',
@@ -54,12 +57,14 @@ const fetchRepositoryMiddleware = (req, res) => {
           restrictFrom0To1
         )
 
+        const getAvatarUrl = R.pipe(R.prop('owner'), R.prop('avatar_url'))
+
         res.send({
-          OK: R.T,
+          OK: R.T(),
           data: R.applySpec({
             name: R.prop('full_name'),
             description: R.prop('description'),
-            avatarURL: R.pipe(R.prop('owner'), R.prop('avatar_url')),
+            avatarURL: getAvatarUrl,
             stars: R.prop('stargazers_count'),
             linesOfCode: R.prop('size'),
             rockstarLevel: calculateRockstarLevel
@@ -83,5 +88,5 @@ server.get('/', renderFrontendMiddleware)
 server.post('/repo', fetchRepositoryMiddleware)
 
 server.listen(port, () => {
-  console.log(`> Ready on ${address}:${port}`)
+  console.log(`> Ready on ${URL}`)
 })

@@ -20,6 +20,13 @@ module.exports = {
     filename: 'bundle.js'
   },
 
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.PORT': JSON.stringify(process.env.PORT || 1234),
+      'process.env.ADDRESS': JSON.stringify(process.env.ADDRESS || 'localhost')
+    })
+  ],
+
   module: {
     rules: [
       {

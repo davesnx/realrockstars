@@ -1,7 +1,10 @@
-const port = parseInt(process.env.PORT, 10) || 1234
-const address = process.env.ADDRESS || '//localhost'
+const port = process.env.PORT
+const address = process.env.ADDRESS
+const protocol = address === 'localhost' ? 'http' : 'https'
 
 module.exports = {
+  protocol,
   port,
-  address
+  address,
+  URL: `${protocol}://${address}:${port}`
 }

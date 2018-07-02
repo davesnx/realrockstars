@@ -6,7 +6,9 @@ WORKDIR /usr/src/app
 COPY package.json /usr/src/app
 RUN npm install
 COPY . /usr/src/app
-RUN npm run build
+
+RUN npm run build:server:prod
+RUN npm run build:client:prod
 
 EXPOSE 1234
 CMD ["npm", "run", "serve"]

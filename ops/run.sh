@@ -1,7 +1,9 @@
 docker network create intranet
 
-# docker stop proxy
-# docker rm proxy
+docker run -d \
+  --name watchtower \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  v2tec/watchtower
 
 docker run -d \
   --name proxy \
@@ -18,3 +20,5 @@ docker run -d \
   --name app \
   -p 1234:1234 \
   davesnx/realrockstars.io:4
+
+docker build --build-arg address=localhost --build-arg port=1234 -t app .
