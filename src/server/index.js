@@ -87,4 +87,6 @@ server.listen(PORT, () => {
   console.log(`> Ready on ${URL}`)
 })
 
-console.log(URL, PORT)
+console.log('URL', URL)
+console.log('PORT', PORT)
+console.log('GITHUB', GITHUB)

@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const webpack = require('webpack')
 const path = require('path')
 
@@ -18,10 +20,14 @@ module.exports = {
     filename: 'bundle.js'
   },
 
+  node: {
+    fs: 'empty'
+  },
+
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.PORT': JSON.stringify(process.env.PORT || 1234),
-      'process.env.ADDRESS': JSON.stringify(process.env.ADDRESS || 'localhost')
+      'process.env.PORT': JSON.stringify(process.env.PORT),
+      'process.env.ADDRESS': JSON.stringify(process.env.ADDRESS)
     })
   ],
 
