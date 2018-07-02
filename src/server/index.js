@@ -18,11 +18,6 @@ const github = octonode.client({
   secret: GITHUB.CLIENT_SECRET
 })
 
-github.limit((err, left, max, reset) => {
-  console.log(left)
-  console.log(max)
-})
-
 const sizeDividedByStars = R.converge(R.divide, [
   R.prop('stargazers_count'),
   R.prop('size')
@@ -72,9 +67,16 @@ const fetchRepositoryMiddleware = (req, res) => {
 }
 
 const renderFrontendMiddleware = (_, res) => {
-  const body = renderStylesToString(renderToString(<App />))
+  github.limit((error, left, max, reset) => {
+    if (error) {
+    }
 
-  res.send(Html(body))
+    const body = renderStylesToString(
+      renderToString(<App githubAPILimit={{ max, left }} />)
+    )
+
+    res.send(Html(body))
+  })
 }
 
 server.use(bodyParser.json())
@@ -83,10 +85,4 @@ server.use(express.static('static'))
 server.get('/', renderFrontendMiddleware)
 server.post('/repo', fetchRepositoryMiddleware)
 
-server.listen(PORT, () => {
-  console.log(`> Ready on ${URL}`)
-})
-
-console.log('URL', URL)
-console.log('PORT', PORT)
-console.log('GITHUB', GITHUB)
+server.listen(PORT, () => console.log(`> Ready on ${URL}`))
