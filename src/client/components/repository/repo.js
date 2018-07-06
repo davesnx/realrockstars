@@ -70,7 +70,7 @@ class RepositoryBox extends Component {
     return (
       <Box>
         <Level>
-          <CircularProgress value={rockstarLevel * 10} max={10} />
+          <CircularProgress value={approximate(rockstarLevel)} max={20} />
         </Level>
         <Body>
           <Header>

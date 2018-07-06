@@ -22,8 +22,8 @@ const sizeDividedByStars = R.converge(R.divide, [
   R.prop('stargazers_count'),
   R.prop('size')
 ])
-const restrictFrom0To1 = R.clamp(0, 1)
-const calculateRockstarLevel = R.pipe(sizeDividedByStars, restrictFrom0To1)
+
+const calculateRockstarLevel = R.pipe(sizeDividedByStars, Math.sqrt)
 const getAvatarUrl = R.pipe(R.prop('owner'), R.prop('avatar_url'))
 
 const githubRepo = (org, name) => {
@@ -69,6 +69,7 @@ const fetchRepositoryMiddleware = (req, res) => {
 const renderFrontendMiddleware = (_, res) => {
   github.limit((error, left, max, reset) => {
     if (error) {
+      res.send()
     }
 
     const body = renderStylesToString(
