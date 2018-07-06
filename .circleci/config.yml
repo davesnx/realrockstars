@@ -6,13 +6,20 @@ jobs:
       # checkout code from github
       - checkout
 
-      # login to docker hub
-      - run: docker login -u $DOCKER_USER -p $DOCKER_PASS
-
-      # build the application image
-      - run: docker build -t davesnx/realrockstars.io:$CIRCLE_BUILD_NUM .
-
-      # deploy the image
       - run:
-        - docker tag davesnx/realrockstars.io:$CIRCLE_BUILD_NUM davesnx/realrockstars.io:latest
-        - docker push davesnx/realrockstars.io:$CIRCLE_BUILD_NUM
+          name: login to docker hub
+          command: docker login -u $DOCKER_USER -p $DOCKER_PASS
+
+      - run:
+          name: build the application image
+          command: docker build -t realrockstars .
+
+      - run:
+          name: tag latest
+          command: |
+            docker tag realrockstars davesnx/realrockstars.io
+            docker tag realrockstars davesnx/realrockstars.io:$CIRCLE_BUILD_NUM
+
+      - run:
+          name: deploy the image
+          command: docker push davesnx/realrockstars.io
