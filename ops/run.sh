@@ -19,6 +19,7 @@ docker run -d \
   --network=intranet \
   --name app \
   -p 1234:1234 \
-  davesnx/realrockstars.io:4
+  davesnx/realrockstars.io
 
+# Run it locally
 docker build --build-arg address=localhost --build-arg port=1234 -t app .

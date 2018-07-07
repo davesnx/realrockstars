@@ -12,7 +12,13 @@ jobs:
 
       - run:
           name: build the application image
-          command: docker build -t realrockstars .
+          command: |
+            docker build -t realrockstars \
+            --build-arg PORT=1234 \
+            --build-arg ADDRESS=realrockstars.io \
+            --build-arg GITHUB_CLIENT_ID=$GITHUB_CLIENT_ID \
+            --build-arg GITHUB_CLIENT_SECRET=$GITHUB_CLIENT_SECRET \
+            .
 
       - run:
           name: tag latest
