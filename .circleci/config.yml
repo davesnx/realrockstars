@@ -23,7 +23,7 @@ jobs:
             .
 
       - run:
-          name: deploy the image
+          name: deploy the image and tag as latest
           command: |
             docker push davesnx/realrockstars.io:$CIRCLE_BUILD_NUM
             docker push davesnx/realrockstars.io:latest
