@@ -27,3 +27,4 @@ jobs:
           command: |
             docker push davesnx/realrockstars.io:$CIRCLE_BUILD_NUM
             docker push davesnx/realrockstars.io:latest
+            echo "https://hub.docker.com/r/davesnx/realrockstars.io/tags"
