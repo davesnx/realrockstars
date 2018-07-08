@@ -29,7 +29,13 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.PORT': JSON.stringify(process.env.PORT),
-      'process.env.ADDRESS': JSON.stringify(process.env.ADDRESS)
+      'process.env.ADDRESS': JSON.stringify(process.env.ADDRESS),
+      'process.env.GITHUB_CLIENT_ID': JSON.stringify(
+        process.env.GITHUB_CLIENT_ID
+      ),
+      'process.env.GITHUB_CLIENT_SECRET': JSON.stringify(
+        process.env.GITHUB_CLIENT_SECRET
+      )
     })
   ],
 
