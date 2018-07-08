@@ -28,11 +28,5 @@ docker build \
   --build-arg ADDRESS=localhost \
   --build-arg GITHUB_CLIENT_ID= \
   --build-arg GITHUB_CLIENT_SECRET= \
-  -t app \
+  -t davesnx/realrockstars.io \
   .
-
-docker run \
-  --restart=always \
-  --network=intranet \
-  -p 1234:1234 \
-  app

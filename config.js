@@ -1,8 +1,8 @@
 require('dotenv').config()
 
-const PORT = process.env.PORT
 const ADDRESS = process.env.ADDRESS
 const PROTOCOL = ADDRESS === 'localhost' ? 'http' : 'https'
+const PORT = ADDRESS === 'localhost' ? process.env.PORT : '80'
 const URL = `${PROTOCOL}://${ADDRESS}:${PORT}`
 const GITHUB = {
   CLIENT_ID: process.env.GITHUB_CLIENT_ID,
