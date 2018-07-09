@@ -1,5 +1,4 @@
 import fetch from 'node-fetch'
-import { URL } from './../../../config'
 
 export async function httpPost (resource, body) {
   const bodyString = JSON.stringify(body)
@@ -14,7 +13,7 @@ export async function httpPost (resource, body) {
 }
 
 function _fetch (resource, method = 'GET', body) {
-  return fetch(URL + resource, {
+  return fetch(window.location + resource, {
     method,
     headers: {
       'Content-Type': 'application/json'

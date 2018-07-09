@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   submitHandler (org, name) {
-    httpPost('/repo', { org, name })
+    httpPost('repo', { org, name })
       .then(response => {
         this.setState({
           hasError: false,
