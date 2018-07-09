@@ -15,7 +15,7 @@ jobs:
           name: build the application image
           command: |
             docker build \
-              --build-arg PORT=1234 \
+              --build-arg PORT=443 \
               --build-arg ADDRESS=realrockstars.io \
               --build-arg GITHUB_CLIENT_ID=$GITHUB_CLIENT_ID \
               --build-arg GITHUB_CLIENT_SECRET=$GITHUB_CLIENT_SECRET \
