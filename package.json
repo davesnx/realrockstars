@@ -1,4 +1,5 @@
 {
+  "name": "realrockstars.io",
   "main": "server.js",
   "scripts": {
     "clean": "rm -rf build",
