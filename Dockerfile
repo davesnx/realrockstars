@@ -15,5 +15,5 @@ ARG GITHUB_CLIENT_SECRET
 RUN npm run build:server:prod
 RUN npm run build:client:prod
 
-EXPOSE 1234
+EXPOSE 80
 CMD ["npm", "run", "serve"]

@@ -87,5 +87,3 @@ server.get('/', renderFrontendMiddleware)
 server.post('/repo', fetchRepositoryMiddleware)
 
 server.listen(PORT, () => console.log(`> Ready on ${URL}`))
-
-console.log(URL, GITHUB)

@@ -1,4 +1,4 @@
 realrockstars.io {
     gzip
-    proxy / app:1234
+    proxy / app:80
 }
