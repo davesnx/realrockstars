@@ -56,6 +56,7 @@ const ProgressArc = ({
   const p = 2 * radius * Math.PI
   const humanValue = approximate(value * 10) / 10
   const stroke = (max - value) / max * p
+
   return (
     <Progress>
       {textVisible && <Text color={textColor}>{humanValue.toString()}</Text>}
