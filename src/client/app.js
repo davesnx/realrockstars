@@ -24,6 +24,8 @@ class App extends Component {
   }
 
   submitHandler (org, name) {
+    console.log('window.location', window.location)
+
     httpPost('repo', { org, name })
       .then(response => {
         this.setState({
