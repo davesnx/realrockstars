@@ -54,7 +54,7 @@ const ProgressArc = ({
   rounded
 }) => {
   const p = 2 * radius * Math.PI
-  const humanValue = approximate(value * 10) / 10
+  const humanValue = approximate(value)
   const stroke = (max - value) / max * p
 
   return (
