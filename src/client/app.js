@@ -1,5 +1,4 @@
 import React, { Fragment, Component } from 'react'
-// import { Transition, animated } from 'react-spring'
 
 import Header from './header'
 import Repository from './components/repository/repo'
@@ -17,15 +16,15 @@ class App extends Component {
 
     this.state = {
       hasResult: false,
+      hasError: false,
       data: {}
     }
 
     this.submitHandler = this.submitHandler.bind(this)
+    this.dispatchError = this.dispatchError.bind(this)
   }
 
   submitHandler (org, name) {
-    console.log('window.location', window.location)
-
     httpPost('repo', { org, name })
       .then(response => {
         this.setState({
@@ -34,13 +33,15 @@ class App extends Component {
           data: response.data
         })
       })
-      .catch(response => {
-        this.setState({
-          hasResult: false,
-          hasError: true,
-          error: response.error
-        })
-      })
+      .catch(response => this.dispatchError(response.error))
+  }
+
+  dispatchError (error) {
+    this.setState({
+      hasResult: false,
+      hasError: true,
+      error: error
+    })
   }
 
   renderError (hasError, error) {
@@ -81,7 +82,7 @@ class App extends Component {
       <BaseStyles>
         <Container>
           <Header />
-          <Search onSubmit={this.submitHandler} />
+          <Search onSubmit={this.submitHandler} onError={this.dispatchError} />
           {this.renderError(hasError, error)}
           {this.renderResult(hasResult, data)}
         </Container>

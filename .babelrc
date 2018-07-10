@@ -11,11 +11,5 @@
       }
     ]
   ],
-  "plugins": [
-    "ramda",
-    "transform-async-to-generator",
-    "transform-class-properties",
-    "transform-object-rest-spread",
-    "emotion"
-  ]
+  "plugins": ["ramda", "emotion"]
 }

@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'react-emotion'
+import approximate from 'approximate-number'
 
 import constants from './constants'
-import approximate from 'approximate-number'
 
 const Text = styled.p`
   position: absolute;

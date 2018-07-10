@@ -2,14 +2,12 @@ import React, { Component } from 'react'
 import styled from 'react-emotion'
 import R from 'ramda'
 import SearchIcon from 'react-feather/dist/icons/search'
-// import MaskedInput from 'react-text-mask'
+import parseGitHubURL from 'git-url-parse'
+
 import Spacer from './../spacer'
 import Strong from './../strong'
-// import emailMask from 'text-mask-addons/dist/emailMask'
-
 import constants from './../constants'
 
-// const Input = styled(MaskedInput)`
 const Input = styled.input`
   position: relative;
   display: inline;
@@ -35,6 +33,8 @@ const Input = styled.input`
 const Label = styled.div`
   color: ${constants.colors.black};
   font-size: 14px;
+  display: flex;
+  justify-content: space-between;
 `
 
 const InputWrapper = styled.div`
@@ -59,35 +59,38 @@ class Search extends Component {
     this.state = {
       isFocused: false
     }
+
+    this.keyPressHandler = this.keyPressHandler.bind(this)
+    this.onFocusInputHandler = this.onFocusInputHandler.bind(this)
+    this.onBlurInputHandler = this.onBlurInputHandler.bind(this)
   }
 
-  keyPressHandler = event => {
+  keyPressHandler (event) {
     const { value } = event.target
+    const { name, owner } = parseGitHubURL(value)
+    console.log(parseGitHubURL(value))
 
-    if (!value || !value.includes('/')) {
-      return
-    }
-
-    const [orga, repo] = value.split('/')
-    const hasRepoInput = !!repo.length
-    const hasOrgaInput = !!orga.length
-    const haveInputValues = R.and(hasRepoInput, hasOrgaInput)
+    const hasNameInput = !!name.length
+    const hasOwnerInput = !!owner.length
+    const haveInputValues = R.and(hasNameInput, hasOwnerInput)
     const isEnterKey = event.key === 'Enter'
     const submitFnExist = R.has('onSubmit')(this.props)
     const canSubmit = R.and(isEnterKey, haveInputValues, submitFnExist)
 
     if (canSubmit) {
-      this.props.onSubmit(orga, repo)
+      this.props.onSubmit(owner, name)
+    } else if (isEnterKey) {
+      this.props.onError(`${value} doesn't seem a valid repository`)
     }
   }
 
-  onFocusInputHandler = () => {
+  onFocusInputHandler () {
     this.setState({
       isFocused: true
     })
   }
 
-  onBlurInputHandler = () => {
+  onBlurInputHandler () {
     this.setState({
       isFocused: false
     })
@@ -97,7 +100,9 @@ class Search extends Component {
     return (
       <div onKeyPress={this.keyPressHandler}>
         <Label>
-          <Strong>Search</Strong> for a repository
+          <div>
+            <Strong>Search</Strong> any public github repository
+          </div>
         </Label>
         <Spacer top={1}>
           <InputWrapper focused={this.state.isFocused}>
@@ -108,7 +113,7 @@ class Search extends Component {
               innerRef={node => {
                 this.ref = node
               }}
-              placeholder='facebook/react'
+              placeholder='https://github.com/facebook/react'
             />
           </InputWrapper>
         </Spacer>
@@ -118,7 +123,8 @@ class Search extends Component {
 }
 
 Search.defaultProps = {
-  onSubmit: console.log
+  onSubmit: console.log,
+  onError: console.error
 }
 
 export default Search
