@@ -1,0 +1,19 @@
+{
+  "name": "calculate-realrockstar-level",
+  "main": "main.mjs",
+  "scripts": {
+    "start": "node --experimental-modules main.mjs",
+    "watch": "nodemon --exec node --experimental-modules main.mjs"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "execa": "^0.10.0",
+    "lowdb": "^1.0.0",
+    "octonode": "^0.9.2",
+    "p-map": "^1.2.0",
+    "ramda": "^0.24.1",
+    "shortid": "^2.2.12",
+    "slug": "^0.9.1"
+  }
+}

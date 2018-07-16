@@ -1,0 +1,3095 @@
+{
+  "languages": [
+    {
+      "name": "1C Enterprise",
+      "type": "programming",
+      "color": "#814CCC",
+      "slug": "1c-enterprise",
+      "id": 0
+    },
+    {
+      "name": "ABAP",
+      "type": "programming",
+      "color": "#E8274B",
+      "slug": "abap",
+      "id": 1
+    },
+    {
+      "name": "ABNF",
+      "type": "data",
+      "slug": "abnf",
+      "id": 429
+    },
+    {
+      "name": "AGS Script",
+      "type": "programming",
+      "color": "#B9D9FF",
+      "slug": "ags-script",
+      "id": 2
+    },
+    {
+      "name": "AMPL",
+      "type": "programming",
+      "color": "#E6EFBB",
+      "slug": "ampl",
+      "id": 3
+    },
+    {
+      "name": "ANTLR",
+      "type": "programming",
+      "color": "#9DC3FF",
+      "slug": "antlr",
+      "id": 4
+    },
+    {
+      "name": "API Blueprint",
+      "type": "markup",
+      "color": "#2ACCA8",
+      "slug": "api-blueprint",
+      "id": 5
+    },
+    {
+      "name": "APL",
+      "type": "programming",
+      "color": "#5A8164",
+      "slug": "apl",
+      "id": 6
+    },
+    {
+      "name": "ASN.1",
+      "type": "data",
+      "slug": "asn1",
+      "id": 7
+    },
+    {
+      "name": "ASP",
+      "type": "programming",
+      "color": "#6a40fd",
+      "slug": "asp",
+      "id": 8
+    },
+    {
+      "name": "ATS",
+      "type": "programming",
+      "color": "#1ac620",
+      "slug": "ats",
+      "id": 9
+    },
+    {
+      "name": "ActionScript",
+      "type": "programming",
+      "color": "#882B0F",
+      "slug": "actionscript",
+      "id": 10
+    },
+    {
+      "name": "Ada",
+      "type": "programming",
+      "color": "#02f88c",
+      "slug": "ada",
+      "id": 11
+    },
+    {
+      "name": "Adobe Font Metrics",
+      "type": "data",
+      "slug": "adobe-font-metrics",
+      "id": 147198098
+    },
+    {
+      "name": "Agda",
+      "type": "programming",
+      "color": "#315665",
+      "slug": "agda",
+      "id": 12
+    },
+    {
+      "name": "Alloy",
+      "type": "programming",
+      "color": "#64C800",
+      "slug": "alloy",
+      "id": 13
+    },
+    {
+      "name": "Alpine Abuild",
+      "type": "programming",
+      "slug": "alpine-abuild",
+      "id": 14
+    },
+    {
+      "name": "AngelScript",
+      "type": "programming",
+      "color": "#C7D7DC",
+      "slug": "angelscript",
+      "id": 389477596
+    },
+    {
+      "name": "Ant Build System",
+      "type": "data",
+      "slug": "ant-build-system",
+      "id": 15
+    },
+    {
+      "name": "ApacheConf",
+      "type": "data",
+      "slug": "apacheconf",
+      "id": 16
+    },
+    {
+      "name": "Apex",
+      "type": "programming",
+      "slug": "apex",
+      "id": 17
+    },
+    {
+      "name": "Apollo Guidance Computer",
+      "type": "programming",
+      "slug": "apollo-guidance-computer",
+      "id": 18
+    },
+    {
+      "name": "AppleScript",
+      "type": "programming",
+      "color": "#101F1F",
+      "slug": "applescript",
+      "id": 19
+    },
+    {
+      "name": "Arc",
+      "type": "programming",
+      "color": "#aa2afe",
+      "slug": "arc",
+      "id": 20
+    },
+    {
+      "name": "AsciiDoc",
+      "type": "prose",
+      "slug": "asciidoc",
+      "id": 22
+    },
+    {
+      "name": "AspectJ",
+      "type": "programming",
+      "color": "#a957b0",
+      "slug": "aspectj",
+      "id": 23
+    },
+    {
+      "name": "Assembly",
+      "type": "programming",
+      "color": "#6E4C13",
+      "slug": "assembly",
+      "id": 24
+    },
+    {
+      "name": "Augeas",
+      "type": "programming",
+      "slug": "augeas",
+      "id": 25
+    },
+    {
+      "name": "AutoHotkey",
+      "type": "programming",
+      "color": "#6594b9",
+      "slug": "autohotkey",
+      "id": 26
+    },
+    {
+      "name": "AutoIt",
+      "type": "programming",
+      "color": "#1C3552",
+      "slug": "autoit",
+      "id": 27
+    },
+    {
+      "name": "Awk",
+      "type": "programming",
+      "slug": "awk",
+      "id": 28
+    },
+    {
+      "name": "Ballerina",
+      "type": "programming",
+      "color": "#FF5000",
+      "slug": "ballerina",
+      "id": 720859680
+    },
+    {
+      "name": "Batchfile",
+      "type": "programming",
+      "color": "#C1F12E",
+      "slug": "batchfile",
+      "id": 29
+    },
+    {
+      "name": "Befunge",
+      "type": "programming",
+      "slug": "befunge",
+      "id": 30
+    },
+    {
+      "name": "Bison",
+      "type": "programming",
+      "slug": "bison",
+      "id": 31
+    },
+    {
+      "name": "BitBake",
+      "type": "programming",
+      "slug": "bitbake",
+      "id": 32
+    },
+    {
+      "name": "Blade",
+      "type": "markup",
+      "slug": "blade",
+      "id": 33
+    },
+    {
+      "name": "BlitzBasic",
+      "type": "programming",
+      "slug": "blitzbasic",
+      "id": 34
+    },
+    {
+      "name": "BlitzMax",
+      "type": "programming",
+      "color": "#cd6400",
+      "slug": "blitzmax",
+      "id": 35
+    },
+    {
+      "name": "Bluespec",
+      "type": "programming",
+      "slug": "bluespec",
+      "id": 36
+    },
+    {
+      "name": "Boo",
+      "type": "programming",
+      "color": "#d4bec1",
+      "slug": "boo",
+      "id": 37
+    },
+    {
+      "name": "Brainfuck",
+      "type": "programming",
+      "color": "#2F2530",
+      "slug": "brainfuck",
+      "id": 38
+    },
+    {
+      "name": "Brightscript",
+      "type": "programming",
+      "slug": "brightscript",
+      "id": 39
+    },
+    {
+      "name": "Bro",
+      "type": "programming",
+      "slug": "bro",
+      "id": 40
+    },
+    {
+      "name": "C",
+      "type": "programming",
+      "color": "#555555",
+      "slug": "c",
+      "id": 41
+    },
+    {
+      "name": "C#",
+      "type": "programming",
+      "color": "#178600",
+      "slug": "c",
+      "id": 42
+    },
+    {
+      "name": "C++",
+      "type": "programming",
+      "color": "#f34b7d",
+      "slug": "c",
+      "id": 43
+    },
+    {
+      "name": "C-ObjDump",
+      "type": "data",
+      "slug": "c-objdump",
+      "id": 44
+    },
+    {
+      "name": "C2hs Haskell",
+      "type": "programming",
+      "slug": "c2hs-haskell",
+      "id": 45
+    },
+    {
+      "name": "CLIPS",
+      "type": "programming",
+      "slug": "clips",
+      "id": 46
+    },
+    {
+      "name": "CMake",
+      "type": "programming",
+      "slug": "cmake",
+      "id": 47
+    },
+    {
+      "name": "COBOL",
+      "type": "programming",
+      "slug": "cobol",
+      "id": 48
+    },
+    {
+      "name": "COLLADA",
+      "type": "data",
+      "slug": "collada",
+      "id": 49
+    },
+    {
+      "name": "CSON",
+      "type": "data",
+      "slug": "cson",
+      "id": 424
+    },
+    {
+      "name": "CSS",
+      "type": "markup",
+      "color": "#563d7c",
+      "slug": "css",
+      "id": 50
+    },
+    {
+      "name": "CSV",
+      "type": "data",
+      "slug": "csv",
+      "id": 51
+    },
+    {
+      "name": "CWeb",
+      "type": "programming",
+      "slug": "cweb",
+      "id": 657332628
+    },
+    {
+      "name": "Cap'n Proto",
+      "type": "programming",
+      "slug": "capn-proto",
+      "id": 52
+    },
+    {
+      "name": "CartoCSS",
+      "type": "programming",
+      "slug": "cartocss",
+      "id": 53
+    },
+    {
+      "name": "Ceylon",
+      "type": "programming",
+      "color": "#dfa535",
+      "slug": "ceylon",
+      "id": 54
+    },
+    {
+      "name": "Chapel",
+      "type": "programming",
+      "color": "#8dc63f",
+      "slug": "chapel",
+      "id": 55
+    },
+    {
+      "name": "Charity",
+      "type": "programming",
+      "slug": "charity",
+      "id": 56
+    },
+    {
+      "name": "ChucK",
+      "type": "programming",
+      "slug": "chuck",
+      "id": 57
+    },
+    {
+      "name": "Cirru",
+      "type": "programming",
+      "color": "#ccccff",
+      "slug": "cirru",
+      "id": 58
+    },
+    {
+      "name": "Clarion",
+      "type": "programming",
+      "color": "#db901e",
+      "slug": "clarion",
+      "id": 59
+    },
+    {
+      "name": "Clean",
+      "type": "programming",
+      "color": "#3F85AF",
+      "slug": "clean",
+      "id": 60
+    },
+    {
+      "name": "Click",
+      "type": "programming",
+      "color": "#E4E6F3",
+      "slug": "click",
+      "id": 61
+    },
+    {
+      "name": "Clojure",
+      "type": "programming",
+      "color": "#db5855",
+      "slug": "clojure",
+      "id": 62
+    },
+    {
+      "name": "Closure Templates",
+      "type": "markup",
+      "slug": "closure-templates",
+      "id": 357046146
+    },
+    {
+      "name": "Cloud Firestore Security Rules",
+      "type": "data",
+      "slug": "cloud-firestore-security-rules",
+      "id": 407996372
+    },
+    {
+      "name": "CoNLL-U",
+      "type": "data",
+      "slug": "conll-u",
+      "id": 421026389
+    },
+    {
+      "name": "CoffeeScript",
+      "type": "programming",
+      "color": "#244776",
+      "slug": "coffeescript",
+      "id": 63
+    },
+    {
+      "name": "ColdFusion",
+      "type": "programming",
+      "color": "#ed2cd6",
+      "slug": "coldfusion",
+      "id": 64
+    },
+    {
+      "name": "ColdFusion CFC",
+      "type": "programming",
+      "slug": "coldfusion-cfc",
+      "id": 65
+    },
+    {
+      "name": "Common Lisp",
+      "type": "programming",
+      "color": "#3fb68b",
+      "slug": "common-lisp",
+      "id": 66
+    },
+    {
+      "name": "Common Workflow Language",
+      "type": "programming",
+      "color": "#B5314C",
+      "slug": "common-workflow-language",
+      "id": 988547172
+    },
+    {
+      "name": "Component Pascal",
+      "type": "programming",
+      "color": "#B0CE4E",
+      "slug": "component-pascal",
+      "id": 67
+    },
+    {
+      "name": "Cool",
+      "type": "programming",
+      "slug": "cool",
+      "id": 68
+    },
+    {
+      "name": "Coq",
+      "type": "programming",
+      "slug": "coq",
+      "id": 69
+    },
+    {
+      "name": "Cpp-ObjDump",
+      "type": "data",
+      "slug": "cpp-objdump",
+      "id": 70
+    },
+    {
+      "name": "Creole",
+      "type": "prose",
+      "slug": "creole",
+      "id": 71
+    },
+    {
+      "name": "Crystal",
+      "type": "programming",
+      "color": "#776791",
+      "slug": "crystal",
+      "id": 72
+    },
+    {
+      "name": "Csound",
+      "type": "programming",
+      "slug": "csound",
+      "id": 73
+    },
+    {
+      "name": "Csound Document",
+      "type": "programming",
+      "slug": "csound-document",
+      "id": 74
+    },
+    {
+      "name": "Csound Score",
+      "type": "programming",
+      "slug": "csound-score",
+      "id": 75
+    },
+    {
+      "name": "Cuda",
+      "type": "programming",
+      "color": "#3A4E3A",
+      "slug": "cuda",
+      "id": 77
+    },
+    {
+      "name": "Cycript",
+      "type": "programming",
+      "slug": "cycript",
+      "id": 78
+    },
+    {
+      "name": "Cython",
+      "type": "programming",
+      "slug": "cython",
+      "id": 79
+    },
+    {
+      "name": "D",
+      "type": "programming",
+      "color": "#ba595e",
+      "slug": "d",
+      "id": 80
+    },
+    {
+      "name": "D-ObjDump",
+      "type": "data",
+      "slug": "d-objdump",
+      "id": 81
+    },
+    {
+      "name": "DIGITAL Command Language",
+      "type": "programming",
+      "slug": "digital-command-language",
+      "id": 82
+    },
+    {
+      "name": "DM",
+      "type": "programming",
+      "color": "#447265",
+      "slug": "dm",
+      "id": 83
+    },
+    {
+      "name": "DNS Zone",
+      "type": "data",
+      "slug": "dns-zone",
+      "id": 84
+    },
+    {
+      "name": "DTrace",
+      "type": "programming",
+      "slug": "dtrace",
+      "id": 85
+    },
+    {
+      "name": "Darcs Patch",
+      "type": "data",
+      "slug": "darcs-patch",
+      "id": 86
+    },
+    {
+      "name": "Dart",
+      "type": "programming",
+      "color": "#00B4AB",
+      "slug": "dart",
+      "id": 87
+    },
+    {
+      "name": "DataWeave",
+      "type": "programming",
+      "color": "#003a52",
+      "slug": "dataweave",
+      "id": 974514097
+    },
+    {
+      "name": "Diff",
+      "type": "data",
+      "slug": "diff",
+      "id": 88
+    },
+    {
+      "name": "Dockerfile",
+      "type": "programming",
+      "color": "#0db7ed",
+      "slug": "dockerfile",
+      "id": 89
+    },
+    {
+      "name": "Dogescript",
+      "type": "programming",
+      "color": "#cca760",
+      "slug": "dogescript",
+      "id": 90
+    },
+    {
+      "name": "Dylan",
+      "type": "programming",
+      "color": "#6c616e",
+      "slug": "dylan",
+      "id": 91
+    },
+    {
+      "name": "E",
+      "type": "programming",
+      "color": "#ccce35",
+      "slug": "e",
+      "id": 92
+    },
+    {
+      "name": "EBNF",
+      "type": "data",
+      "slug": "ebnf",
+      "id": 430
+    },
+    {
+      "name": "ECL",
+      "type": "programming",
+      "color": "#8a1267",
+      "slug": "ecl",
+      "id": 93
+    },
+    {
+      "name": "ECLiPSe",
+      "type": "programming",
+      "slug": "eclipse",
+      "id": 94
+    },
+    {
+      "name": "EJS",
+      "type": "markup",
+      "slug": "ejs",
+      "id": 95
+    },
+    {
+      "name": "EQ",
+      "type": "programming",
+      "color": "#a78649",
+      "slug": "eq",
+      "id": 96
+    },
+    {
+      "name": "Eagle",
+      "type": "data",
+      "slug": "eagle",
+      "id": 97
+    },
+    {
+      "name": "Easybuild",
+      "type": "data",
+      "slug": "easybuild",
+      "id": 342840477
+    },
+    {
+      "name": "Ecere Projects",
+      "type": "data",
+      "slug": "ecere-projects",
+      "id": 98
+    },
+    {
+      "name": "Edje Data Collection",
+      "type": "data",
+      "slug": "edje-data-collection",
+      "id": 342840478
+    },
+    {
+      "name": "Eiffel",
+      "type": "programming",
+      "color": "#946d57",
+      "slug": "eiffel",
+      "id": 99
+    },
+    {
+      "name": "Elixir",
+      "type": "programming",
+      "color": "#6e4a7e",
+      "slug": "elixir",
+      "id": 100
+    },
+    {
+      "name": "Elm",
+      "type": "programming",
+      "color": "#60B5CC",
+      "slug": "elm",
+      "id": 101
+    },
+    {
+      "name": "Emacs Lisp",
+      "type": "programming",
+      "color": "#c065db",
+      "slug": "emacs-lisp",
+      "id": 102
+    },
+    {
+      "name": "EmberScript",
+      "type": "programming",
+      "color": "#FFF4F3",
+      "slug": "emberscript",
+      "id": 103
+    },
+    {
+      "name": "Erlang",
+      "type": "programming",
+      "color": "#B83998",
+      "slug": "erlang",
+      "id": 104
+    },
+    {
+      "name": "F#",
+      "type": "programming",
+      "color": "#b845fc",
+      "slug": "f",
+      "id": 105
+    },
+    {
+      "name": "FLUX",
+      "type": "programming",
+      "color": "#88ccff",
+      "slug": "flux",
+      "id": 106
+    },
+    {
+      "name": "Factor",
+      "type": "programming",
+      "color": "#636746",
+      "slug": "factor",
+      "id": 108
+    },
+    {
+      "name": "Fancy",
+      "type": "programming",
+      "color": "#7b9db4",
+      "slug": "fancy",
+      "id": 109
+    },
+    {
+      "name": "Fantom",
+      "type": "programming",
+      "color": "#14253c",
+      "slug": "fantom",
+      "id": 110
+    },
+    {
+      "name": "Filebench WML",
+      "type": "programming",
+      "slug": "filebench-wml",
+      "id": 111
+    },
+    {
+      "name": "Filterscript",
+      "type": "programming",
+      "slug": "filterscript",
+      "id": 112
+    },
+    {
+      "name": "Formatted",
+      "type": "data",
+      "slug": "formatted",
+      "id": 113
+    },
+    {
+      "name": "Forth",
+      "type": "programming",
+      "color": "#341708",
+      "slug": "forth",
+      "id": 114
+    },
+    {
+      "name": "Fortran",
+      "type": "programming",
+      "color": "#4d41b1",
+      "slug": "fortran",
+      "id": 107
+    },
+    {
+      "name": "FreeMarker",
+      "type": "programming",
+      "color": "#0050b2",
+      "slug": "freemarker",
+      "id": 115
+    },
+    {
+      "name": "Frege",
+      "type": "programming",
+      "color": "#00cafe",
+      "slug": "frege",
+      "id": 116
+    },
+    {
+      "name": "G-code",
+      "type": "data",
+      "slug": "g-code",
+      "id": 117
+    },
+    {
+      "name": "GAMS",
+      "type": "programming",
+      "slug": "gams",
+      "id": 118
+    },
+    {
+      "name": "GAP",
+      "type": "programming",
+      "slug": "gap",
+      "id": 119
+    },
+    {
+      "name": "GCC Machine Description",
+      "type": "programming",
+      "slug": "gcc-machine-description",
+      "id": 121
+    },
+    {
+      "name": "GDB",
+      "type": "programming",
+      "slug": "gdb",
+      "id": 122
+    },
+    {
+      "name": "GDScript",
+      "type": "programming",
+      "color": "#355570",
+      "slug": "gdscript",
+      "id": 123
+    },
+    {
+      "name": "GLSL",
+      "type": "programming",
+      "slug": "glsl",
+      "id": 124
+    },
+    {
+      "name": "GN",
+      "type": "data",
+      "slug": "gn",
+      "id": 302957008
+    },
+    {
+      "name": "Game Maker Language",
+      "type": "programming",
+      "color": "#8fb200",
+      "slug": "game-maker-language",
+      "id": 125
+    },
+    {
+      "name": "Genie",
+      "type": "programming",
+      "color": "#fb855d",
+      "slug": "genie",
+      "id": 792408528
+    },
+    {
+      "name": "Genshi",
+      "type": "programming",
+      "slug": "genshi",
+      "id": 126
+    },
+    {
+      "name": "Gentoo Ebuild",
+      "type": "programming",
+      "slug": "gentoo-ebuild",
+      "id": 127
+    },
+    {
+      "name": "Gentoo Eclass",
+      "type": "programming",
+      "slug": "gentoo-eclass",
+      "id": 128
+    },
+    {
+      "name": "Gerber Image",
+      "type": "data",
+      "slug": "gerber-image",
+      "id": 404627610
+    },
+    {
+      "name": "Gettext Catalog",
+      "type": "prose",
+      "slug": "gettext-catalog",
+      "id": 129
+    },
+    {
+      "name": "Gherkin",
+      "type": "programming",
+      "color": "#5B2063",
+      "slug": "gherkin",
+      "id": 76
+    },
+    {
+      "name": "Glyph",
+      "type": "programming",
+      "color": "#c1ac7f",
+      "slug": "glyph",
+      "id": 130
+    },
+    {
+      "name": "Gnuplot",
+      "type": "programming",
+      "color": "#f0a9f0",
+      "slug": "gnuplot",
+      "id": 131
+    },
+    {
+      "name": "Go",
+      "type": "programming",
+      "color": "#375eab",
+      "slug": "go",
+      "id": 132
+    },
+    {
+      "name": "Golo",
+      "type": "programming",
+      "color": "#88562A",
+      "slug": "golo",
+      "id": 133
+    },
+    {
+      "name": "Gosu",
+      "type": "programming",
+      "color": "#82937f",
+      "slug": "gosu",
+      "id": 134
+    },
+    {
+      "name": "Grace",
+      "type": "programming",
+      "slug": "grace",
+      "id": 135
+    },
+    {
+      "name": "Gradle",
+      "type": "data",
+      "slug": "gradle",
+      "id": 136
+    },
+    {
+      "name": "Grammatical Framework",
+      "type": "programming",
+      "color": "#79aa7a",
+      "slug": "grammatical-framework",
+      "id": 137
+    },
+    {
+      "name": "Graph Modeling Language",
+      "type": "data",
+      "slug": "graph-modeling-language",
+      "id": 138
+    },
+    {
+      "name": "GraphQL",
+      "type": "data",
+      "slug": "graphql",
+      "id": 139
+    },
+    {
+      "name": "Graphviz (DOT)",
+      "type": "data",
+      "slug": "graphviz-dot",
+      "id": 140
+    },
+    {
+      "name": "Groovy",
+      "type": "programming",
+      "color": "#e69f56",
+      "slug": "groovy",
+      "id": 142
+    },
+    {
+      "name": "Groovy Server Pages",
+      "type": "programming",
+      "slug": "groovy-server-pages",
+      "id": 143
+    },
+    {
+      "name": "HCL",
+      "type": "programming",
+      "slug": "hcl",
+      "id": 144
+    },
+    {
+      "name": "HLSL",
+      "type": "programming",
+      "slug": "hlsl",
+      "id": 145
+    },
+    {
+      "name": "HTML",
+      "type": "markup",
+      "color": "#e34c26",
+      "slug": "html",
+      "id": 146
+    },
+    {
+      "name": "HTML+Django",
+      "type": "markup",
+      "slug": "htmldjango",
+      "id": 147
+    },
+    {
+      "name": "HTML+ECR",
+      "type": "markup",
+      "slug": "htmlecr",
+      "id": 148
+    },
+    {
+      "name": "HTML+EEX",
+      "type": "markup",
+      "slug": "htmleex",
+      "id": 149
+    },
+    {
+      "name": "HTML+ERB",
+      "type": "markup",
+      "slug": "htmlerb",
+      "id": 150
+    },
+    {
+      "name": "HTML+PHP",
+      "type": "markup",
+      "slug": "htmlphp",
+      "id": 151
+    },
+    {
+      "name": "HTTP",
+      "type": "data",
+      "slug": "http",
+      "id": 152
+    },
+    {
+      "name": "HXML",
+      "type": "data",
+      "slug": "hxml",
+      "id": 786683730
+    },
+    {
+      "name": "Hack",
+      "type": "programming",
+      "color": "#878787",
+      "slug": "hack",
+      "id": 153
+    },
+    {
+      "name": "Haml",
+      "type": "markup",
+      "slug": "haml",
+      "id": 154
+    },
+    {
+      "name": "Handlebars",
+      "type": "markup",
+      "slug": "handlebars",
+      "id": 155
+    },
+    {
+      "name": "Harbour",
+      "type": "programming",
+      "color": "#0e60e3",
+      "slug": "harbour",
+      "id": 156
+    },
+    {
+      "name": "Haskell",
+      "type": "programming",
+      "color": "#5e5086",
+      "slug": "haskell",
+      "id": 157
+    },
+    {
+      "name": "Haxe",
+      "type": "programming",
+      "color": "#df7900",
+      "slug": "haxe",
+      "id": 158
+    },
+    {
+      "name": "HiveQL",
+      "type": "programming",
+      "color": "#dce200",
+      "slug": "hiveql",
+      "id": 931814087
+    },
+    {
+      "name": "Hy",
+      "type": "programming",
+      "color": "#7790B2",
+      "slug": "hy",
+      "id": 159
+    },
+    {
+      "name": "HyPhy",
+      "type": "programming",
+      "slug": "hyphy",
+      "id": 160
+    },
+    {
+      "name": "IDL",
+      "type": "programming",
+      "color": "#a3522f",
+      "slug": "idl",
+      "id": 161
+    },
+    {
+      "name": "IGOR Pro",
+      "type": "programming",
+      "slug": "igor-pro",
+      "id": 162
+    },
+    {
+      "name": "INI",
+      "type": "data",
+      "slug": "ini",
+      "id": 163
+    },
+    {
+      "name": "IRC log",
+      "type": "data",
+      "slug": "irc-log",
+      "id": 164
+    },
+    {
+      "name": "Idris",
+      "type": "programming",
+      "color": "#b30000",
+      "slug": "idris",
+      "id": 165
+    },
+    {
+      "name": "Inform 7",
+      "type": "programming",
+      "slug": "inform-7",
+      "id": 166
+    },
+    {
+      "name": "Inno Setup",
+      "type": "programming",
+      "slug": "inno-setup",
+      "id": 167
+    },
+    {
+      "name": "Io",
+      "type": "programming",
+      "color": "#a9188d",
+      "slug": "io",
+      "id": 168
+    },
+    {
+      "name": "Ioke",
+      "type": "programming",
+      "color": "#078193",
+      "slug": "ioke",
+      "id": 169
+    },
+    {
+      "name": "Isabelle",
+      "type": "programming",
+      "color": "#FEFE00",
+      "slug": "isabelle",
+      "id": 170
+    },
+    {
+      "name": "Isabelle ROOT",
+      "type": "programming",
+      "slug": "isabelle-root",
+      "id": 171
+    },
+    {
+      "name": "J",
+      "type": "programming",
+      "color": "#9EEDFF",
+      "slug": "j",
+      "id": 172
+    },
+    {
+      "name": "JFlex",
+      "type": "programming",
+      "slug": "jflex",
+      "id": 173
+    },
+    {
+      "name": "JSON",
+      "type": "data",
+      "slug": "json",
+      "id": 174
+    },
+    {
+      "name": "JSON with Comments",
+      "type": "data",
+      "slug": "json-with-comments",
+      "id": 423
+    },
+    {
+      "name": "JSON5",
+      "type": "data",
+      "slug": "json5",
+      "id": 175
+    },
+    {
+      "name": "JSONLD",
+      "type": "data",
+      "slug": "jsonld",
+      "id": 176
+    },
+    {
+      "name": "JSONiq",
+      "type": "programming",
+      "color": "#40d47e",
+      "slug": "jsoniq",
+      "id": 177
+    },
+    {
+      "name": "JSX",
+      "type": "programming",
+      "slug": "jsx",
+      "id": 178
+    },
+    {
+      "name": "Jasmin",
+      "type": "programming",
+      "slug": "jasmin",
+      "id": 180
+    },
+    {
+      "name": "Java",
+      "type": "programming",
+      "color": "#b07219",
+      "slug": "java",
+      "id": 181
+    },
+    {
+      "name": "Java Server Pages",
+      "type": "programming",
+      "slug": "java-server-pages",
+      "id": 182
+    },
+    {
+      "name": "JavaScript",
+      "type": "programming",
+      "color": "#f1e05a",
+      "slug": "javascript",
+      "id": 183
+    },
+    {
+      "name": "Jison",
+      "type": "programming",
+      "slug": "jison",
+      "id": 284531423
+    },
+    {
+      "name": "Jison Lex",
+      "type": "programming",
+      "slug": "jison-lex",
+      "id": 406395330
+    },
+    {
+      "name": "Jolie",
+      "type": "programming",
+      "color": "#843179",
+      "slug": "jolie",
+      "id": 998078858
+    },
+    {
+      "name": "Julia",
+      "type": "programming",
+      "color": "#a270ba",
+      "slug": "julia",
+      "id": 184
+    },
+    {
+      "name": "Jupyter Notebook",
+      "type": "markup",
+      "color": "#DA5B0B",
+      "slug": "jupyter-notebook",
+      "id": 185
+    },
+    {
+      "name": "KRL",
+      "type": "programming",
+      "color": "#28430A",
+      "slug": "krl",
+      "id": 186
+    },
+    {
+      "name": "KiCad Layout",
+      "type": "data",
+      "slug": "kicad-layout",
+      "id": 187
+    },
+    {
+      "name": "KiCad Legacy Layout",
+      "type": "data",
+      "slug": "kicad-legacy-layout",
+      "id": 140848857
+    },
+    {
+      "name": "KiCad Schematic",
+      "type": "data",
+      "slug": "kicad-schematic",
+      "id": 622447435
+    },
+    {
+      "name": "Kit",
+      "type": "markup",
+      "slug": "kit",
+      "id": 188
+    },
+    {
+      "name": "Kotlin",
+      "type": "programming",
+      "color": "#F18E33",
+      "slug": "kotlin",
+      "id": 189
+    },
+    {
+      "name": "LFE",
+      "type": "programming",
+      "color": "#4C3023",
+      "slug": "lfe",
+      "id": 190
+    },
+    {
+      "name": "LLVM",
+      "type": "programming",
+      "color": "#185619",
+      "slug": "llvm",
+      "id": 191
+    },
+    {
+      "name": "LOLCODE",
+      "type": "programming",
+      "color": "#cc9900",
+      "slug": "lolcode",
+      "id": 192
+    },
+    {
+      "name": "LSL",
+      "type": "programming",
+      "color": "#3d9970",
+      "slug": "lsl",
+      "id": 193
+    },
+    {
+      "name": "LabVIEW",
+      "type": "programming",
+      "slug": "labview",
+      "id": 194
+    },
+    {
+      "name": "Lasso",
+      "type": "programming",
+      "color": "#999999",
+      "slug": "lasso",
+      "id": 195
+    },
+    {
+      "name": "Latte",
+      "type": "markup",
+      "slug": "latte",
+      "id": 196
+    },
+    {
+      "name": "Lean",
+      "type": "programming",
+      "slug": "lean",
+      "id": 197
+    },
+    {
+      "name": "Less",
+      "type": "markup",
+      "slug": "less",
+      "id": 198
+    },
+    {
+      "name": "Lex",
+      "type": "programming",
+      "color": "#DBCA00",
+      "slug": "lex",
+      "id": 199
+    },
+    {
+      "name": "LilyPond",
+      "type": "programming",
+      "slug": "lilypond",
+      "id": 200
+    },
+    {
+      "name": "Limbo",
+      "type": "programming",
+      "slug": "limbo",
+      "id": 201
+    },
+    {
+      "name": "Linker Script",
+      "type": "data",
+      "slug": "linker-script",
+      "id": 202
+    },
+    {
+      "name": "Linux Kernel Module",
+      "type": "data",
+      "slug": "linux-kernel-module",
+      "id": 203
+    },
+    {
+      "name": "Liquid",
+      "type": "markup",
+      "slug": "liquid",
+      "id": 204
+    },
+    {
+      "name": "Literate Agda",
+      "type": "programming",
+      "slug": "literate-agda",
+      "id": 205
+    },
+    {
+      "name": "Literate CoffeeScript",
+      "type": "programming",
+      "slug": "literate-coffeescript",
+      "id": 206
+    },
+    {
+      "name": "Literate Haskell",
+      "type": "programming",
+      "slug": "literate-haskell",
+      "id": 207
+    },
+    {
+      "name": "LiveScript",
+      "type": "programming",
+      "color": "#499886",
+      "slug": "livescript",
+      "id": 208
+    },
+    {
+      "name": "Logos",
+      "type": "programming",
+      "slug": "logos",
+      "id": 209
+    },
+    {
+      "name": "Logtalk",
+      "type": "programming",
+      "slug": "logtalk",
+      "id": 210
+    },
+    {
+      "name": "LookML",
+      "type": "programming",
+      "color": "#652B81",
+      "slug": "lookml",
+      "id": 211
+    },
+    {
+      "name": "LoomScript",
+      "type": "programming",
+      "slug": "loomscript",
+      "id": 212
+    },
+    {
+      "name": "Lua",
+      "type": "programming",
+      "color": "#000080",
+      "slug": "lua",
+      "id": 213
+    },
+    {
+      "name": "M",
+      "type": "programming",
+      "slug": "m",
+      "id": 214
+    },
+    {
+      "name": "M4",
+      "type": "programming",
+      "slug": "m4",
+      "id": 215
+    },
+    {
+      "name": "M4Sugar",
+      "type": "programming",
+      "slug": "m4sugar",
+      "id": 216
+    },
+    {
+      "name": "MAXScript",
+      "type": "programming",
+      "color": "#00a6a6",
+      "slug": "maxscript",
+      "id": 217
+    },
+    {
+      "name": "MQL4",
+      "type": "programming",
+      "color": "#62A8D6",
+      "slug": "mql4",
+      "id": 426
+    },
+    {
+      "name": "MQL5",
+      "type": "programming",
+      "color": "#4A76B8",
+      "slug": "mql5",
+      "id": 427
+    },
+    {
+      "name": "MTML",
+      "type": "markup",
+      "color": "#b7e1f4",
+      "slug": "mtml",
+      "id": 218
+    },
+    {
+      "name": "MUF",
+      "type": "programming",
+      "slug": "muf",
+      "id": 219
+    },
+    {
+      "name": "Makefile",
+      "type": "programming",
+      "color": "#427819",
+      "slug": "makefile",
+      "id": 220
+    },
+    {
+      "name": "Mako",
+      "type": "programming",
+      "slug": "mako",
+      "id": 221
+    },
+    {
+      "name": "Markdown",
+      "type": "prose",
+      "slug": "markdown",
+      "id": 222
+    },
+    {
+      "name": "Marko",
+      "type": "markup",
+      "slug": "marko",
+      "id": 932782397
+    },
+    {
+      "name": "Mask",
+      "type": "markup",
+      "color": "#f97732",
+      "slug": "mask",
+      "id": 223
+    },
+    {
+      "name": "Mathematica",
+      "type": "programming",
+      "slug": "mathematica",
+      "id": 224
+    },
+    {
+      "name": "Matlab",
+      "type": "programming",
+      "color": "#e16737",
+      "slug": "matlab",
+      "id": 225
+    },
+    {
+      "name": "Maven POM",
+      "type": "data",
+      "slug": "maven-pom",
+      "id": 226
+    },
+    {
+      "name": "Max",
+      "type": "programming",
+      "color": "#c4a79c",
+      "slug": "max",
+      "id": 227
+    },
+    {
+      "name": "MediaWiki",
+      "type": "prose",
+      "slug": "mediawiki",
+      "id": 228
+    },
+    {
+      "name": "Mercury",
+      "type": "programming",
+      "color": "#ff2b2b",
+      "slug": "mercury",
+      "id": 229
+    },
+    {
+      "name": "Meson",
+      "type": "programming",
+      "color": "#007800",
+      "slug": "meson",
+      "id": 799141244
+    },
+    {
+      "name": "Metal",
+      "type": "programming",
+      "color": "#8f14e9",
+      "slug": "metal",
+      "id": 230
+    },
+    {
+      "name": "MiniD",
+      "type": "programming",
+      "slug": "minid",
+      "id": 231
+    },
+    {
+      "name": "Mirah",
+      "type": "programming",
+      "color": "#c7a938",
+      "slug": "mirah",
+      "id": 232
+    },
+    {
+      "name": "Modelica",
+      "type": "programming",
+      "slug": "modelica",
+      "id": 233
+    },
+    {
+      "name": "Modula-2",
+      "type": "programming",
+      "slug": "modula-2",
+      "id": 234
+    },
+    {
+      "name": "Module Management System",
+      "type": "programming",
+      "slug": "module-management-system",
+      "id": 235
+    },
+    {
+      "name": "Monkey",
+      "type": "programming",
+      "slug": "monkey",
+      "id": 236
+    },
+    {
+      "name": "Moocode",
+      "type": "programming",
+      "slug": "moocode",
+      "id": 237
+    },
+    {
+      "name": "MoonScript",
+      "type": "programming",
+      "slug": "moonscript",
+      "id": 238
+    },
+    {
+      "name": "Myghty",
+      "type": "programming",
+      "slug": "myghty",
+      "id": 239
+    },
+    {
+      "name": "NCL",
+      "type": "programming",
+      "color": "#28431f",
+      "slug": "ncl",
+      "id": 240
+    },
+    {
+      "name": "NL",
+      "type": "data",
+      "slug": "nl",
+      "id": 241
+    },
+    {
+      "name": "NSIS",
+      "type": "programming",
+      "slug": "nsis",
+      "id": 242
+    },
+    {
+      "name": "Nearley",
+      "type": "programming",
+      "color": "#990000",
+      "slug": "nearley",
+      "id": 521429430
+    },
+    {
+      "name": "Nemerle",
+      "type": "programming",
+      "color": "#3d3c6e",
+      "slug": "nemerle",
+      "id": 243
+    },
+    {
+      "name": "NetLinx",
+      "type": "programming",
+      "color": "#0aa0ff",
+      "slug": "netlinx",
+      "id": 244
+    },
+    {
+      "name": "NetLinx+ERB",
+      "type": "programming",
+      "color": "#747faa",
+      "slug": "netlinxerb",
+      "id": 245
+    },
+    {
+      "name": "NetLogo",
+      "type": "programming",
+      "color": "#ff6375",
+      "slug": "netlogo",
+      "id": 246
+    },
+    {
+      "name": "NewLisp",
+      "type": "programming",
+      "color": "#87AED7",
+      "slug": "newlisp",
+      "id": 247
+    },
+    {
+      "name": "Nextflow",
+      "type": "programming",
+      "color": "#3ac486",
+      "slug": "nextflow",
+      "id": 506780613
+    },
+    {
+      "name": "Nginx",
+      "type": "data",
+      "slug": "nginx",
+      "id": 248
+    },
+    {
+      "name": "Nim",
+      "type": "programming",
+      "color": "#37775b",
+      "slug": "nim",
+      "id": 249
+    },
+    {
+      "name": "Ninja",
+      "type": "data",
+      "slug": "ninja",
+      "id": 250
+    },
+    {
+      "name": "Nit",
+      "type": "programming",
+      "color": "#009917",
+      "slug": "nit",
+      "id": 251
+    },
+    {
+      "name": "Nix",
+      "type": "programming",
+      "color": "#7e7eff",
+      "slug": "nix",
+      "id": 252
+    },
+    {
+      "name": "Nu",
+      "type": "programming",
+      "color": "#c9df40",
+      "slug": "nu",
+      "id": 253
+    },
+    {
+      "name": "NumPy",
+      "type": "programming",
+      "slug": "numpy",
+      "id": 254
+    },
+    {
+      "name": "OCaml",
+      "type": "programming",
+      "color": "#3be133",
+      "slug": "ocaml",
+      "id": 255
+    },
+    {
+      "name": "ObjDump",
+      "type": "data",
+      "slug": "objdump",
+      "id": 256
+    },
+    {
+      "name": "Objective-C",
+      "type": "programming",
+      "color": "#438eff",
+      "slug": "objective-c",
+      "id": 257
+    },
+    {
+      "name": "Objective-C++",
+      "type": "programming",
+      "color": "#6866fb",
+      "slug": "objective-c",
+      "id": 258
+    },
+    {
+      "name": "Objective-J",
+      "type": "programming",
+      "color": "#ff0c5a",
+      "slug": "objective-j",
+      "id": 259
+    },
+    {
+      "name": "Omgrofl",
+      "type": "programming",
+      "color": "#cabbff",
+      "slug": "omgrofl",
+      "id": 260
+    },
+    {
+      "name": "Opa",
+      "type": "programming",
+      "slug": "opa",
+      "id": 261
+    },
+    {
+      "name": "Opal",
+      "type": "programming",
+      "color": "#f7ede0",
+      "slug": "opal",
+      "id": 262
+    },
+    {
+      "name": "OpenCL",
+      "type": "programming",
+      "slug": "opencl",
+      "id": 263
+    },
+    {
+      "name": "OpenEdge ABL",
+      "type": "programming",
+      "slug": "openedge-abl",
+      "id": 264
+    },
+    {
+      "name": "OpenRC runscript",
+      "type": "programming",
+      "slug": "openrc-runscript",
+      "id": 265
+    },
+    {
+      "name": "OpenSCAD",
+      "type": "programming",
+      "slug": "openscad",
+      "id": 266
+    },
+    {
+      "name": "OpenType Feature File",
+      "type": "data",
+      "slug": "opentype-feature-file",
+      "id": 374317347
+    },
+    {
+      "name": "Org",
+      "type": "prose",
+      "slug": "org",
+      "id": 267
+    },
+    {
+      "name": "Ox",
+      "type": "programming",
+      "slug": "ox",
+      "id": 268
+    },
+    {
+      "name": "Oxygene",
+      "type": "programming",
+      "color": "#cdd0e3",
+      "slug": "oxygene",
+      "id": 269
+    },
+    {
+      "name": "Oz",
+      "type": "programming",
+      "color": "#fab738",
+      "slug": "oz",
+      "id": 270
+    },
+    {
+      "name": "P4",
+      "type": "programming",
+      "color": "#7055b5",
+      "slug": "p4",
+      "id": 348895984
+    },
+    {
+      "name": "PAWN",
+      "type": "programming",
+      "color": "#dbb284",
+      "slug": "pawn",
+      "id": 271
+    },
+    {
+      "name": "PHP",
+      "type": "programming",
+      "color": "#4F5D95",
+      "slug": "php",
+      "id": 272
+    },
+    {
+      "name": "PLSQL",
+      "type": "programming",
+      "color": "#dad8d8",
+      "slug": "plsql",
+      "id": 273
+    },
+    {
+      "name": "PLpgSQL",
+      "type": "programming",
+      "slug": "plpgsql",
+      "id": 274
+    },
+    {
+      "name": "POV-Ray SDL",
+      "type": "programming",
+      "slug": "pov-ray-sdl",
+      "id": 275
+    },
+    {
+      "name": "Pan",
+      "type": "programming",
+      "color": "#cc0000",
+      "slug": "pan",
+      "id": 276
+    },
+    {
+      "name": "Papyrus",
+      "type": "programming",
+      "color": "#6600cc",
+      "slug": "papyrus",
+      "id": 277
+    },
+    {
+      "name": "Parrot",
+      "type": "programming",
+      "color": "#f3ca0a",
+      "slug": "parrot",
+      "id": 278
+    },
+    {
+      "name": "Parrot Assembly",
+      "type": "programming",
+      "slug": "parrot-assembly",
+      "id": 279
+    },
+    {
+      "name": "Parrot Internal Representation",
+      "type": "programming",
+      "slug": "parrot-internal-representation",
+      "id": 280
+    },
+    {
+      "name": "Pascal",
+      "type": "programming",
+      "color": "#E3F171",
+      "slug": "pascal",
+      "id": 281
+    },
+    {
+      "name": "Pep8",
+      "type": "programming",
+      "color": "#C76F5B",
+      "slug": "pep8",
+      "id": 840372442
+    },
+    {
+      "name": "Perl",
+      "type": "programming",
+      "color": "#0298c3",
+      "slug": "perl",
+      "id": 282
+    },
+    {
+      "name": "Perl 6",
+      "type": "programming",
+      "color": "#0000fb",
+      "slug": "perl-6",
+      "id": 283
+    },
+    {
+      "name": "Pic",
+      "type": "markup",
+      "slug": "pic",
+      "id": 425
+    },
+    {
+      "name": "Pickle",
+      "type": "data",
+      "slug": "pickle",
+      "id": 284
+    },
+    {
+      "name": "PicoLisp",
+      "type": "programming",
+      "slug": "picolisp",
+      "id": 285
+    },
+    {
+      "name": "PigLatin",
+      "type": "programming",
+      "color": "#fcd7de",
+      "slug": "piglatin",
+      "id": 286
+    },
+    {
+      "name": "Pike",
+      "type": "programming",
+      "color": "#005390",
+      "slug": "pike",
+      "id": 287
+    },
+    {
+      "name": "Pod",
+      "type": "prose",
+      "slug": "pod",
+      "id": 288
+    },
+    {
+      "name": "PogoScript",
+      "type": "programming",
+      "color": "#d80074",
+      "slug": "pogoscript",
+      "id": 289
+    },
+    {
+      "name": "Pony",
+      "type": "programming",
+      "slug": "pony",
+      "id": 290
+    },
+    {
+      "name": "PostCSS",
+      "type": "markup",
+      "slug": "postcss",
+      "id": 262764437
+    },
+    {
+      "name": "PostScript",
+      "type": "markup",
+      "color": "#da291c",
+      "slug": "postscript",
+      "id": 291
+    },
+    {
+      "name": "PowerBuilder",
+      "type": "programming",
+      "color": "#8f0f8d",
+      "slug": "powerbuilder",
+      "id": 292
+    },
+    {
+      "name": "PowerShell",
+      "type": "programming",
+      "color": "#012456",
+      "slug": "powershell",
+      "id": 293
+    },
+    {
+      "name": "Processing",
+      "type": "programming",
+      "color": "#0096D8",
+      "slug": "processing",
+      "id": 294
+    },
+    {
+      "name": "Prolog",
+      "type": "programming",
+      "color": "#74283c",
+      "slug": "prolog",
+      "id": 295
+    },
+    {
+      "name": "Propeller Spin",
+      "type": "programming",
+      "color": "#7fa2a7",
+      "slug": "propeller-spin",
+      "id": 296
+    },
+    {
+      "name": "Protocol Buffer",
+      "type": "data",
+      "slug": "protocol-buffer",
+      "id": 297
+    },
+    {
+      "name": "Public Key",
+      "type": "data",
+      "slug": "public-key",
+      "id": 298
+    },
+    {
+      "name": "Pug",
+      "type": "markup",
+      "slug": "pug",
+      "id": 179
+    },
+    {
+      "name": "Puppet",
+      "type": "programming",
+      "color": "#302B6D",
+      "slug": "puppet",
+      "id": 299
+    },
+    {
+      "name": "Pure Data",
+      "type": "data",
+      "slug": "pure-data",
+      "id": 300
+    },
+    {
+      "name": "PureBasic",
+      "type": "programming",
+      "color": "#5a6986",
+      "slug": "purebasic",
+      "id": 301
+    },
+    {
+      "name": "PureScript",
+      "type": "programming",
+      "color": "#1D222D",
+      "slug": "purescript",
+      "id": 302
+    },
+    {
+      "name": "Python",
+      "type": "programming",
+      "color": "#3572A5",
+      "slug": "python",
+      "id": 303
+    },
+    {
+      "name": "Python console",
+      "type": "programming",
+      "slug": "python-console",
+      "id": 428
+    },
+    {
+      "name": "Python traceback",
+      "type": "data",
+      "slug": "python-traceback",
+      "id": 304
+    },
+    {
+      "name": "QML",
+      "type": "programming",
+      "color": "#44a51c",
+      "slug": "qml",
+      "id": 305
+    },
+    {
+      "name": "QMake",
+      "type": "programming",
+      "slug": "qmake",
+      "id": 306
+    },
+    {
+      "name": "R",
+      "type": "programming",
+      "color": "#198CE7",
+      "slug": "r",
+      "id": 307
+    },
+    {
+      "name": "RAML",
+      "type": "markup",
+      "color": "#77d9fb",
+      "slug": "raml",
+      "id": 308
+    },
+    {
+      "name": "RDoc",
+      "type": "prose",
+      "slug": "rdoc",
+      "id": 309
+    },
+    {
+      "name": "REALbasic",
+      "type": "programming",
+      "slug": "realbasic",
+      "id": 310
+    },
+    {
+      "name": "REXX",
+      "type": "programming",
+      "slug": "rexx",
+      "id": 311
+    },
+    {
+      "name": "RHTML",
+      "type": "markup",
+      "slug": "rhtml",
+      "id": 312
+    },
+    {
+      "name": "RMarkdown",
+      "type": "prose",
+      "slug": "rmarkdown",
+      "id": 313
+    },
+    {
+      "name": "RPC",
+      "type": "programming",
+      "slug": "rpc",
+      "id": 1031374237
+    },
+    {
+      "name": "RPM Spec",
+      "type": "data",
+      "slug": "rpm-spec",
+      "id": 314
+    },
+    {
+      "name": "RUNOFF",
+      "type": "markup",
+      "color": "#665a4e",
+      "slug": "runoff",
+      "id": 315
+    },
+    {
+      "name": "Racket",
+      "type": "programming",
+      "color": "#22228f",
+      "slug": "racket",
+      "id": 316
+    },
+    {
+      "name": "Ragel",
+      "type": "programming",
+      "color": "#9d5200",
+      "slug": "ragel",
+      "id": 317
+    },
+    {
+      "name": "Rascal",
+      "type": "programming",
+      "color": "#fffaa0",
+      "slug": "rascal",
+      "id": 173616037
+    },
+    {
+      "name": "Raw token data",
+      "type": "data",
+      "slug": "raw-token-data",
+      "id": 318
+    },
+    {
+      "name": "Reason",
+      "type": "programming",
+      "slug": "reason",
+      "id": 869538413
+    },
+    {
+      "name": "Rebol",
+      "type": "programming",
+      "color": "#358a5b",
+      "slug": "rebol",
+      "id": 319
+    },
+    {
+      "name": "Red",
+      "type": "programming",
+      "color": "#f50000",
+      "slug": "red",
+      "id": 320
+    },
+    {
+      "name": "Redcode",
+      "type": "programming",
+      "slug": "redcode",
+      "id": 321
+    },
+    {
+      "name": "Regular Expression",
+      "type": "data",
+      "slug": "regular-expression",
+      "id": 363378884
+    },
+    {
+      "name": "Ren'Py",
+      "type": "programming",
+      "color": "#ff7f7f",
+      "slug": "renpy",
+      "id": 322
+    },
+    {
+      "name": "RenderScript",
+      "type": "programming",
+      "slug": "renderscript",
+      "id": 323
+    },
+    {
+      "name": "Ring",
+      "type": "programming",
+      "color": "#2D54CB",
+      "slug": "ring",
+      "id": 431
+    },
+    {
+      "name": "RobotFramework",
+      "type": "programming",
+      "slug": "robotframework",
+      "id": 324
+    },
+    {
+      "name": "Roff",
+      "type": "markup",
+      "color": "#ecdebe",
+      "slug": "roff",
+      "id": 141
+    },
+    {
+      "name": "Rouge",
+      "type": "programming",
+      "color": "#cc0088",
+      "slug": "rouge",
+      "id": 325
+    },
+    {
+      "name": "Ruby",
+      "type": "programming",
+      "color": "#701516",
+      "slug": "ruby",
+      "id": 326
+    },
+    {
+      "name": "Rust",
+      "type": "programming",
+      "color": "#dea584",
+      "slug": "rust",
+      "id": 327
+    },
+    {
+      "name": "SAS",
+      "type": "programming",
+      "color": "#B34936",
+      "slug": "sas",
+      "id": 328
+    },
+    {
+      "name": "SCSS",
+      "type": "markup",
+      "slug": "scss",
+      "id": 329
+    },
+    {
+      "name": "SMT",
+      "type": "programming",
+      "slug": "smt",
+      "id": 330
+    },
+    {
+      "name": "SPARQL",
+      "type": "data",
+      "slug": "sparql",
+      "id": 331
+    },
+    {
+      "name": "SQF",
+      "type": "programming",
+      "color": "#3F3F3F",
+      "slug": "sqf",
+      "id": 332
+    },
+    {
+      "name": "SQL",
+      "type": "data",
+      "slug": "sql",
+      "id": 333
+    },
+    {
+      "name": "SQLPL",
+      "type": "programming",
+      "slug": "sqlpl",
+      "id": 334
+    },
+    {
+      "name": "SRecode Template",
+      "type": "markup",
+      "color": "#348a34",
+      "slug": "srecode-template",
+      "id": 335
+    },
+    {
+      "name": "STON",
+      "type": "data",
+      "slug": "ston",
+      "id": 336
+    },
+    {
+      "name": "SVG",
+      "type": "data",
+      "slug": "svg",
+      "id": 337
+    },
+    {
+      "name": "Sage",
+      "type": "programming",
+      "slug": "sage",
+      "id": 338
+    },
+    {
+      "name": "SaltStack",
+      "type": "programming",
+      "color": "#646464",
+      "slug": "saltstack",
+      "id": 339
+    },
+    {
+      "name": "Sass",
+      "type": "markup",
+      "slug": "sass",
+      "id": 340
+    },
+    {
+      "name": "Scala",
+      "type": "programming",
+      "color": "#c22d40",
+      "slug": "scala",
+      "id": 341
+    },
+    {
+      "name": "Scaml",
+      "type": "markup",
+      "slug": "scaml",
+      "id": 342
+    },
+    {
+      "name": "Scheme",
+      "type": "programming",
+      "color": "#1e4aec",
+      "slug": "scheme",
+      "id": 343
+    },
+    {
+      "name": "Scilab",
+      "type": "programming",
+      "slug": "scilab",
+      "id": 344
+    },
+    {
+      "name": "Self",
+      "type": "programming",
+      "color": "#0579aa",
+      "slug": "self",
+      "id": 345
+    },
+    {
+      "name": "ShaderLab",
+      "type": "programming",
+      "slug": "shaderlab",
+      "id": 664257356
+    },
+    {
+      "name": "Shell",
+      "type": "programming",
+      "color": "#89e051",
+      "slug": "shell",
+      "id": 346
+    },
+    {
+      "name": "ShellSession",
+      "type": "programming",
+      "slug": "shellsession",
+      "id": 347
+    },
+    {
+      "name": "Shen",
+      "type": "programming",
+      "color": "#120F14",
+      "slug": "shen",
+      "id": 348
+    },
+    {
+      "name": "Slash",
+      "type": "programming",
+      "color": "#007eff",
+      "slug": "slash",
+      "id": 349
+    },
+    {
+      "name": "Slim",
+      "type": "markup",
+      "slug": "slim",
+      "id": 350
+    },
+    {
+      "name": "Smali",
+      "type": "programming",
+      "slug": "smali",
+      "id": 351
+    },
+    {
+      "name": "Smalltalk",
+      "type": "programming",
+      "color": "#596706",
+      "slug": "smalltalk",
+      "id": 352
+    },
+    {
+      "name": "Smarty",
+      "type": "programming",
+      "slug": "smarty",
+      "id": 353
+    },
+    {
+      "name": "Solidity",
+      "type": "programming",
+      "color": "#AA6746",
+      "slug": "solidity",
+      "id": 237469032
+    },
+    {
+      "name": "SourcePawn",
+      "type": "programming",
+      "color": "#5c7611",
+      "slug": "sourcepawn",
+      "id": 354
+    },
+    {
+      "name": "Spline Font Database",
+      "type": "data",
+      "slug": "spline-font-database",
+      "id": 767169629
+    },
+    {
+      "name": "Squirrel",
+      "type": "programming",
+      "color": "#800000",
+      "slug": "squirrel",
+      "id": 355
+    },
+    {
+      "name": "Stan",
+      "type": "programming",
+      "color": "#b2011d",
+      "slug": "stan",
+      "id": 356
+    },
+    {
+      "name": "Standard ML",
+      "type": "programming",
+      "color": "#dc566d",
+      "slug": "standard-ml",
+      "id": 357
+    },
+    {
+      "name": "Stata",
+      "type": "programming",
+      "slug": "stata",
+      "id": 358
+    },
+    {
+      "name": "Stylus",
+      "type": "markup",
+      "slug": "stylus",
+      "id": 359
+    },
+    {
+      "name": "SubRip Text",
+      "type": "data",
+      "slug": "subrip-text",
+      "id": 360
+    },
+    {
+      "name": "SugarSS",
+      "type": "markup",
+      "slug": "sugarss",
+      "id": 826404698
+    },
+    {
+      "name": "SuperCollider",
+      "type": "programming",
+      "color": "#46390b",
+      "slug": "supercollider",
+      "id": 361
+    },
+    {
+      "name": "Swift",
+      "type": "programming",
+      "color": "#ffac45",
+      "slug": "swift",
+      "id": 362
+    },
+    {
+      "name": "SystemVerilog",
+      "type": "programming",
+      "color": "#DAE1C2",
+      "slug": "systemverilog",
+      "id": 363
+    },
+    {
+      "name": "TI Program",
+      "type": "programming",
+      "color": "#A0AA87",
+      "slug": "ti-program",
+      "id": 422
+    },
+    {
+      "name": "TLA",
+      "type": "programming",
+      "slug": "tla",
+      "id": 364
+    },
+    {
+      "name": "TOML",
+      "type": "data",
+      "slug": "toml",
+      "id": 365
+    },
+    {
+      "name": "TXL",
+      "type": "programming",
+      "slug": "txl",
+      "id": 366
+    },
+    {
+      "name": "Tcl",
+      "type": "programming",
+      "color": "#e4cc98",
+      "slug": "tcl",
+      "id": 367
+    },
+    {
+      "name": "Tcsh",
+      "type": "programming",
+      "slug": "tcsh",
+      "id": 368
+    },
+    {
+      "name": "TeX",
+      "type": "markup",
+      "color": "#3D6117",
+      "slug": "tex",
+      "id": 369
+    },
+    {
+      "name": "Tea",
+      "type": "markup",
+      "slug": "tea",
+      "id": 370
+    },
+    {
+      "name": "Terra",
+      "type": "programming",
+      "color": "#00004c",
+      "slug": "terra",
+      "id": 371
+    },
+    {
+      "name": "Text",
+      "type": "prose",
+      "slug": "text",
+      "id": 372
+    },
+    {
+      "name": "Textile",
+      "type": "prose",
+      "slug": "textile",
+      "id": 373
+    },
+    {
+      "name": "Thrift",
+      "type": "programming",
+      "slug": "thrift",
+      "id": 374
+    },
+    {
+      "name": "Turing",
+      "type": "programming",
+      "color": "#cf142b",
+      "slug": "turing",
+      "id": 375
+    },
+    {
+      "name": "Turtle",
+      "type": "data",
+      "slug": "turtle",
+      "id": 376
+    },
+    {
+      "name": "Twig",
+      "type": "markup",
+      "slug": "twig",
+      "id": 377
+    },
+    {
+      "name": "Type Language",
+      "type": "data",
+      "slug": "type-language",
+      "id": 632765617
+    },
+    {
+      "name": "TypeScript",
+      "type": "programming",
+      "color": "#2b7489",
+      "slug": "typescript",
+      "id": 378
+    },
+    {
+      "name": "Unified Parallel C",
+      "type": "programming",
+      "slug": "unified-parallel-c",
+      "id": 379
+    },
+    {
+      "name": "Unity3D Asset",
+      "type": "data",
+      "slug": "unity3d-asset",
+      "id": 380
+    },
+    {
+      "name": "Unix Assembly",
+      "type": "programming",
+      "slug": "unix-assembly",
+      "id": 120
+    },
+    {
+      "name": "Uno",
+      "type": "programming",
+      "slug": "uno",
+      "id": 381
+    },
+    {
+      "name": "UnrealScript",
+      "type": "programming",
+      "color": "#a54c4d",
+      "slug": "unrealscript",
+      "id": 382
+    },
+    {
+      "name": "UrWeb",
+      "type": "programming",
+      "slug": "urweb",
+      "id": 383
+    },
+    {
+      "name": "VCL",
+      "type": "programming",
+      "color": "#148AA8",
+      "slug": "vcl",
+      "id": 384
+    },
+    {
+      "name": "VHDL",
+      "type": "programming",
+      "color": "#adb2cb",
+      "slug": "vhdl",
+      "id": 385
+    },
+    {
+      "name": "Vala",
+      "type": "programming",
+      "color": "#fbe5cd",
+      "slug": "vala",
+      "id": 386
+    },
+    {
+      "name": "Verilog",
+      "type": "programming",
+      "color": "#b2b7f8",
+      "slug": "verilog",
+      "id": 387
+    },
+    {
+      "name": "Vim script",
+      "type": "programming",
+      "color": "#199f4b",
+      "slug": "vim-script",
+      "id": 388
+    },
+    {
+      "name": "Visual Basic",
+      "type": "programming",
+      "color": "#945db7",
+      "slug": "visual-basic",
+      "id": 389
+    },
+    {
+      "name": "Volt",
+      "type": "programming",
+      "color": "#1F1F1F",
+      "slug": "volt",
+      "id": 390
+    },
+    {
+      "name": "Vue",
+      "type": "markup",
+      "color": "#2c3e50",
+      "slug": "vue",
+      "id": 391
+    },
+    {
+      "name": "Wavefront Material",
+      "type": "data",
+      "slug": "wavefront-material",
+      "id": 392
+    },
+    {
+      "name": "Wavefront Object",
+      "type": "data",
+      "slug": "wavefront-object",
+      "id": 393
+    },
+    {
+      "name": "Web Ontology Language",
+      "type": "data",
+      "slug": "web-ontology-language",
+      "id": 394
+    },
+    {
+      "name": "WebAssembly",
+      "type": "programming",
+      "color": "#04133b",
+      "slug": "webassembly",
+      "id": 956556503
+    },
+    {
+      "name": "WebIDL",
+      "type": "programming",
+      "slug": "webidl",
+      "id": 395
+    },
+    {
+      "name": "World of Warcraft Addon Data",
+      "type": "data",
+      "slug": "world-of-warcraft-addon-data",
+      "id": 396
+    },
+    {
+      "name": "X BitMap",
+      "type": "data",
+      "slug": "x-bitmap",
+      "id": 782911107
+    },
+    {
+      "name": "X PixMap",
+      "type": "data",
+      "slug": "x-pixmap",
+      "id": 781846279
+    },
+    {
+      "name": "X10",
+      "type": "programming",
+      "color": "#4B6BEF",
+      "slug": "x10",
+      "id": 397
+    },
+    {
+      "name": "XC",
+      "type": "programming",
+      "color": "#99DA07",
+      "slug": "xc",
+      "id": 398
+    },
+    {
+      "name": "XCompose",
+      "type": "data",
+      "slug": "xcompose",
+      "id": 225167241
+    },
+    {
+      "name": "XML",
+      "type": "data",
+      "slug": "xml",
+      "id": 399
+    },
+    {
+      "name": "XPages",
+      "type": "data",
+      "slug": "xpages",
+      "id": 400
+    },
+    {
+      "name": "XProc",
+      "type": "programming",
+      "slug": "xproc",
+      "id": 401
+    },
+    {
+      "name": "XQuery",
+      "type": "programming",
+      "color": "#5232e7",
+      "slug": "xquery",
+      "id": 402
+    },
+    {
+      "name": "XS",
+      "type": "programming",
+      "slug": "xs",
+      "id": 403
+    },
+    {
+      "name": "XSLT",
+      "type": "programming",
+      "color": "#EB8CEB",
+      "slug": "xslt",
+      "id": 404
+    },
+    {
+      "name": "Xojo",
+      "type": "programming",
+      "slug": "xojo",
+      "id": 405
+    },
+    {
+      "name": "Xtend",
+      "type": "programming",
+      "slug": "xtend",
+      "id": 406
+    },
+    {
+      "name": "YAML",
+      "type": "data",
+      "slug": "yaml",
+      "id": 407
+    },
+    {
+      "name": "YANG",
+      "type": "data",
+      "slug": "yang",
+      "id": 408
+    },
+    {
+      "name": "YARA",
+      "type": "data",
+      "slug": "yara",
+      "id": 805122868
+    },
+    {
+      "name": "Yacc",
+      "type": "programming",
+      "color": "#4B6C4B",
+      "slug": "yacc",
+      "id": 409
+    },
+    {
+      "name": "Zephir",
+      "type": "programming",
+      "color": "#118f9e",
+      "slug": "zephir",
+      "id": 410
+    },
+    {
+      "name": "Zimpl",
+      "type": "programming",
+      "slug": "zimpl",
+      "id": 411
+    },
+    {
+      "name": "desktop",
+      "type": "data",
+      "slug": "desktop",
+      "id": 412
+    },
+    {
+      "name": "eC",
+      "type": "programming",
+      "color": "#913960",
+      "slug": "ec",
+      "id": 413
+    },
+    {
+      "name": "edn",
+      "type": "data",
+      "slug": "edn",
+      "id": 414
+    },
+    {
+      "name": "fish",
+      "type": "programming",
+      "slug": "fish",
+      "id": 415
+    },
+    {
+      "name": "mupad",
+      "type": "programming",
+      "slug": "mupad",
+      "id": 416
+    },
+    {
+      "name": "nesC",
+      "type": "programming",
+      "color": "#94B0C7",
+      "slug": "nesc",
+      "id": 417
+    },
+    {
+      "name": "ooc",
+      "type": "programming",
+      "color": "#b0b77e",
+      "slug": "ooc",
+      "id": 418
+    },
+    {
+      "name": "q",
+      "type": "programming",
+      "color": "#0040cd",
+      "slug": "q",
+      "id": 970539067
+    },
+    {
+      "name": "reStructuredText",
+      "type": "prose",
+      "slug": "restructuredtext",
+      "id": 419
+    },
+    {
+      "name": "sed",
+      "type": "programming",
+      "color": "#64b970",
+      "slug": "sed",
+      "id": 847830017
+    },
+    {
+      "name": "wdl",
+      "type": "programming",
+      "color": "#42f1f4",
+      "slug": "wdl",
+      "id": 374521672
+    },
+    {
+      "name": "wisp",
+      "type": "programming",
+      "color": "#7582D1",
+      "slug": "wisp",
+      "id": 420
+    },
+    {
+      "name": "xBase",
+      "type": "programming",
+      "color": "#403a40",
+      "slug": "xbase",
+      "id": 421
+    }
+  ]
+}
