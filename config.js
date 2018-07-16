@@ -10,7 +10,7 @@ const GITHUB = {
   CLIENT_SECRET: process.env.GITHUB_CLIENT_SECRET
 }
 
-module.exports = {
+export default {
   PORT,
   URL,
   GITHUB
