@@ -8,14 +8,14 @@ import path from 'path'
 import octonode from 'octonode'
 import R from 'ramda'
 
-import { URL, PORT, GITHUB } from './../../config'
+import ENV from './../../config'
 import Html from './html'
 import App from './../client/app'
 
 const server = express()
 const github = octonode.client({
-  id: GITHUB.CLIENT_ID,
-  secret: GITHUB.CLIENT_SECRET
+  id: ENV.GITHUB.CLIENT_ID,
+  secret: ENV.GITHUB.CLIENT_SECRET
 })
 
 const sizeDividedByStars = R.converge(R.divide, [
@@ -86,4 +86,4 @@ server.use(express.static('static'))
 server.get('/', renderFrontendMiddleware)
 server.post('/repo', fetchRepositoryMiddleware)
 
-server.listen(PORT, () => console.log(`> Ready on ${URL}`))
+server.listen(ENV.PORT, () => console.log(`> Ready on ${ENV.URL}`))

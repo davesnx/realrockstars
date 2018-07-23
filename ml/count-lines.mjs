@@ -19,6 +19,7 @@ const cloneRepo = repo => {
     `--branch=${repo.default_branch}`,
     '--depth=1',
     '--no-tags',
+    '--single-branch',
     repo.url,
     folder
   ])

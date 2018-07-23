@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 const webpack = require('webpack')
 const path = require('path')
 const nodeExternals = require('webpack-node-externals')
@@ -7,6 +5,10 @@ const nodeExternals = require('webpack-node-externals')
 const DEVELOPMENT = process.env.NODE_ENV === 'development'
 
 module.exports = {
+  mode: process.env.NODE_ENV,
+
+  watch: DEVELOPMENT,
+
   devtool: 'source-map',
 
   target: 'node',
@@ -25,19 +27,6 @@ module.exports = {
   node: {
     fs: 'empty'
   },
-
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env.PORT': JSON.stringify(process.env.PORT),
-      'process.env.ADDRESS': JSON.stringify(process.env.ADDRESS),
-      'process.env.GITHUB_CLIENT_ID': JSON.stringify(
-        process.env.GITHUB_CLIENT_ID
-      ),
-      'process.env.GITHUB_CLIENT_SECRET': JSON.stringify(
-        process.env.GITHUB_CLIENT_SECRET
-      )
-    })
-  ],
 
   module: {
     rules: [

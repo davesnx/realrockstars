@@ -1,19 +1,15 @@
 FROM mhart/alpine-node:10
 
-RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
 
-COPY package*.json /usr/src/app/
-RUN npm install
-COPY . /usr/src/app
+COPY package.json yarn.lock ./
+RUN yarn
+COPY . ./
 
-ARG ADDRESS
-ARG PORT
-ARG GITHUB_CLIENT_ID
-ARG GITHUB_CLIENT_SECRET
+ENV NODE_ENV=production
 
-RUN npm run build:server:prod
-RUN npm run build:client:prod
+RUN yarn run build:server:prod
+RUN yarn run build:client:prod
 
 EXPOSE 80
-CMD ["npm", "run", "serve"]
+CMD ["yarn", "serve"]
