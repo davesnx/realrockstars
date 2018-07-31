@@ -418,6 +418,10 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
+list@^2.0.13:
+  version "2.0.13"
+  resolved "https://registry.npmjs.org/list/-/list-2.0.13.tgz#aa63d8704b57b78545421fd2f5223146bf9d0e0f"
+
 lodash@4, lodash@^4.15.0:
   version "4.17.10"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"

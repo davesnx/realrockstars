@@ -1,41 +1,61 @@
 const R = require('ramda')
 const execa = require('execa')
-const { delay, getRandomInt } = require('./utils')
+const { delay } = require('./utils.js')
+const fs = require('fs')
 
-const main = async () => {
-  const reposData = await DB.get('repos').value()
+const directoryExists = directory => {
+  fs.stat(directory, err => {
+    if (err && err.errno === 34) {
+      return false
+    } else {
+      return true
+    }
+  })
+}
 
-  const repo = reposData[getRandomInt(0, reposData.length - 1)]
-  // for (const repo of reposData) {
+const removeFolder = async folder =>
+  await execa.shell(['rm -rf', folder].join(' '))
 
+const countLines = async (repo, sshUrl, defaultBranch) => {
+  const folder = `.tmp/${repo}`
   try {
-    const folder = `.tmp/${repo.full_name}`
-    const repository = `https://github.com/${repo.full_name}`
+    console.log(`git clone ${sshUrl}`)
 
-    console.log(`git clone ${repository}`)
+    // if (directoryExists(folder)) {
+    //   console.log('Already cloned')
+    //   return 0
+    // }
 
     const git = await execa.shell(
       [
         'git clone',
-        `--branch=${repo.default_branch}`,
+        `--branch=${defaultBranch}`,
         '--depth=1',
         '--no-tags',
         '--single-branch',
-        repository,
+        sshUrl,
         folder
       ].join(' ')
     )
 
-    delay(1000)
+    await delay(1000)
 
-    const tokei = await execa.shell('tokei', [folder, '--output json'])
-    const lines = R.mapObjIndexed((_, value) => value.code, tokei.stdout)
-    const totalLines = R.sum(lines)
-    console.log(totalLines)
+    const tokei = await execa.shell(`tokei ${folder} --output=json`)
+
+    const linesByLanguage = R.mapObjIndexed(
+      R.prop('code'),
+      JSON.parse(tokei.stdout)
+    )
+
+    const totalLines = R.sum(R.values(linesByLanguage))
+
+    await removeFolder(folder)
+
+    return totalLines
   } catch (error) {
+    await removeFolder(folder)
     console.log(error)
   }
-  // }
 }
 
-main()
+module.exports = countLines
